@@ -6,28 +6,26 @@
     <title>Ministry of Tourism | पर्यटन मंत्रालय | Government of India</title>
     <meta name="description" content="Official Tourism Experience Portal - Ministry of Tourism, Government of India. Discover historical monuments, tourist circuits, regional cuisine, vibrant festivals, photo galleries, and travel planning.">
     
-    <!-- Favicon -->
+    
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇮🇳</text></svg>">
 
-    <!-- UX4G Design System v3.3.2 Authoritative CDN -->
+    
     <link rel="stylesheet" href="https://cdn.ux4g.gov.in/UX4G@3.3.2/index.css">
 
-    <!-- Noto Sans & Cinzel Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Display:wght@500;600;700;800&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome 6 Icons -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Custom Stylesheet matching tourism.gov.in & UX4G -->
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="style.css?v=prod2026">
 </head>
 <body class="ux4g-body" id="home">
 
-    <!-- ===================================================================
-         1. TOP ACCESSIBILITY & UTILITY STRIP (tourism.gov.in standard)
-         =================================================================== -->
+    
     <div class="gov-top-utility-bar" role="region" aria-label="Accessibility and Language Settings">
         <div class="gov-container utility-inner">
             <div class="utility-left">
@@ -37,11 +35,11 @@
                 <span class="gov-text-en">GOVERNMENT OF INDIA</span>
             </div>
             <div class="utility-right">
-                <!-- Skip to Main Content for Screen Readers -->
+                
                 <a href="#mainContent" class="gov-skip-link">Skip to main content</a>
                 <span class="divider">|</span>
 
-                <!-- Text Size Adjusters (A- / A / A+) -->
+                
                 <div class="gov-text-resizer" aria-label="Font Resizer">
                     <button type="button" class="resizer-btn" id="fontDecrease" title="Decrease font size" aria-label="Decrease font size">A-</button>
                     <button type="button" class="resizer-btn active" id="fontReset" title="Reset font size" aria-label="Normal font size">A</button>
@@ -49,13 +47,13 @@
                 </div>
                 <span class="divider">|</span>
 
-                <!-- High-Contrast / Theme Switcher -->
+                
                 <button type="button" class="gov-theme-btn" id="themeToggle" title="Toggle Contrast Mode">
                     <i class="fa-solid fa-circle-half-stroke" id="themeIcon"></i> <span id="themeLabel">Dark Mode</span>
                 </button>
                 <span class="divider">|</span>
 
-                <!-- Bilingual Language Selector -->
+                
                 <button type="button" class="gov-lang-btn" id="langToggle" title="Toggle Language">
                     <i class="fa-solid fa-language"></i> <span id="langLabel">हिंदी</span>
                 </button>
@@ -63,12 +61,10 @@
         </div>
     </div>
 
-    <!-- ===================================================================
-         2. OFFICIAL MINISTRY LOGO & SEARCH HEADER (tourism.gov.in layout)
-         =================================================================== -->
+    
     <header class="gov-main-header">
         <div class="gov-container header-inner">
-            <!-- Left: National Emblem & Ministry Title -->
+            
             <div class="gov-brand-left">
                 <div class="national-emblem-wrap">
                     <svg class="emblem-svg" viewBox="0 0 100 120" fill="#2E1E66" xmlns="http://www.w3.org/2000/svg" aria-label="State Emblem of India">
@@ -84,7 +80,7 @@
                 </div>
             </div>
 
-            <!-- Center: Portal Live Search Box -->
+            
             <div class="gov-search-center">
                 <div class="gov-search-box">
                     <input type="text" id="topNavSearch" placeholder="खोजें / Search destinations, circuits, heritage..." aria-label="Search tourism portal" autocomplete="off">
@@ -94,7 +90,7 @@
                 </div>
             </div>
 
-            <!-- Right: Incredible India & NIDHI+ Official Logos -->
+            
             <div class="gov-brand-right">
                 <div class="brand-partner-item">
                     <span class="incredible-india-logo">Incredible !ndia</span>
@@ -107,12 +103,10 @@
         </div>
     </header>
 
-    <!-- ===================================================================
-         3. PRIMARY GOVERNMENT NAVIGATION BAR (Deep Indigo with Active Indicators)
-         =================================================================== -->
+    
     <nav class="gov-primary-nav" role="navigation" aria-label="Primary Navigation">
         <div class="gov-container nav-inner-wrap">
-            <!-- Mobile Menu Toggle Button -->
+            
             <button type="button" class="gov-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -137,9 +131,7 @@
         </div>
     </nav>
 
-    <!-- ===================================================================
-         4. TICKER / OFFICIAL ANNOUNCEMENTS RIBBON
-         =================================================================== -->
+    
     <div class="gov-ticker-ribbon">
         <div class="gov-container ticker-flex">
             <div class="ticker-badge">
@@ -159,13 +151,10 @@
 
     <main id="mainContent">
 
-        <!-- ===================================================================
-             5. HERO CAROUSEL BANNER (Full-Bleed Slider from tourism.gov.in)
-             Featuring Statue of Unity, Taj Mahal, Dalhousie, Munnar
-             =================================================================== -->
+        
         <section class="gov-carousel-section" id="heroCarousel" aria-label="Tourism Highlights Carousel">
             <div class="carousel-container">
-                <!-- Slide 1: Statue of Unity (Gujarat) -->
+                
                 <div class="carousel-slide active" data-index="0" style="background-image: url('images/explore-statueofunity.jpg');">
                     <div class="carousel-overlay"></div>
                     <div class="gov-container slide-caption-box">
@@ -183,7 +172,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 2: Taj Mahal (Agra, Uttar Pradesh) -->
+                
                 <div class="carousel-slide" data-index="1" style="background-image: url('images/dest-agra.jpg');">
                     <div class="carousel-overlay"></div>
                     <div class="gov-container slide-caption-box">
@@ -201,7 +190,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: Dalhousie (Himachal Pradesh) -->
+                
                 <div class="carousel-slide" data-index="2" style="background-image: url('images/explore-dalhousie.jpg');">
                     <div class="carousel-overlay"></div>
                     <div class="gov-container slide-caption-box">
@@ -219,7 +208,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 4: Munnar (Kerala) -->
+                
                 <div class="carousel-slide" data-index="3" style="background-image: url('images/explore-munnar.jpg');">
                     <div class="carousel-overlay"></div>
                     <div class="gov-container slide-caption-box">
@@ -237,11 +226,11 @@
                     </div>
                 </div>
 
-                <!-- Carousel Controls -->
+                
                 <button type="button" class="carousel-arrow prev" id="carouselPrev" aria-label="Previous Slide">&lsaquo;</button>
                 <button type="button" class="carousel-arrow next" id="carouselNext" aria-label="Next Slide">&rsaquo;</button>
 
-                <!-- Indicator Dots -->
+                
                 <div class="carousel-indicators" id="carouselIndicators">
                     <button type="button" class="indicator-dot active" data-slide-to="0" aria-label="Slide 1"></button>
                     <button type="button" class="indicator-dot" data-slide-to="1" aria-label="Slide 2"></button>
@@ -251,10 +240,7 @@
             </div>
         </section>
 
-        <!-- ===================================================================
-             6. PRIME MINISTER'S & LEADERSHIP VISION (tourism.gov.in style)
-             With Visual Initiative Cards
-             =================================================================== -->
+        
         <section class="gov-vision-section">
             <div class="gov-container vision-card-wrap">
                 <div class="vision-grid">
@@ -302,14 +288,11 @@
             </div>
         </section>
 
-        <!-- ===================================================================
-             7. POPULAR TRIPS & DESTINATIONS EXPLORER
-             Interactive Filtering & Live Search Engine
-             =================================================================== -->
+        
         <section class="gov-section trips-explorer-section" id="popularTrips">
             <div class="gov-container">
                 <div class="gov-section-header">
-                    <div class="section-badge-gov">
+                    <div class="section-kicker-gov">
                         <i class="fa-solid fa-compass"></i> <span id="explorerBadge">DISCOVER INCREDIBLE INDIA</span>
                     </div>
                     <h2 class="gov-section-title" id="explorerTitle">Popular Trips & Tourist Destinations</h2>
@@ -318,7 +301,7 @@
                     </p>
                 </div>
 
-                <!-- Explorer Toolbar -->
+                
                 <div class="gov-filter-panel">
                     <div class="filter-search-row">
                         <div class="gov-input-wrap">
@@ -344,9 +327,9 @@
                     <span class="status-verified"><i class="fa-solid fa-circle-check"></i> Official Tourism Data</span>
                 </div>
 
-                <!-- Destinations Cards Grid -->
+                
                 <div class="gov-cards-grid" id="destinationsGrid">
-                    <!-- Populated dynamically by script.js -->
+                    
                 </div>
 
                 <div class="gov-empty-results hidden" id="noResults">
@@ -358,15 +341,12 @@
             </div>
         </section>
 
-        <!-- ===================================================================
-             8. ARCHITECTURAL HERITAGE & MONUMENTS
-             6 UNESCO World Heritage Wonders
-             =================================================================== -->
+        
         <section class="gov-section heritage-monuments-section" id="heritage">
             <div class="gov-container">
                 <div class="gov-section-header">
-                    <div class="section-badge-gov">
-                        <i class="fa-solid fa-landmark-dome"></i> UNESCO WORLD HERITAGE
+                    <div class="section-kicker-gov">
+                        <i class="fa-solid fa-landmark-dome"></i> <span>UNESCO WORLD HERITAGE • 42 TANGIBLE PROPERTIES</span>
                     </div>
                     <h2 class="gov-section-title" id="heritageTitle">Architectural Wonders of India</h2>
                     <p class="gov-section-subtitle" id="heritageSubtitle">
@@ -374,207 +354,289 @@
                     </p>
                 </div>
 
-                <div class="heritage-showcase-grid">
-                    <!-- 1. Taj Mahal -->
-                    <div class="ux4g-card heritage-portal-card">
-                        <div class="heritage-img-box">
-                            <img src="images/dest-agra.jpg" alt="Taj Mahal, Agra" loading="lazy">
-                            <span class="unesco-tag"><i class="fa-solid fa-award"></i> UNESCO Site</span>
+                
+                <div class="heritage-feature-panel">
+                    <div class="feature-panel-media">
+                        <img src="images/dest-agra.jpg" alt="Taj Mahal, Agra">
+                        <div class="feature-tag-strip">
+                            <span class="heritage-badge-pill"><i class="fa-solid fa-award"></i> UNESCO Inscription #252</span>
+                            <span class="heritage-badge-asi"><i class="fa-solid fa-shield-halved"></i> ASI Protected</span>
                         </div>
-                        <div class="heritage-body-box">
-                            <span class="heritage-loc"><i class="fa-solid fa-location-dot"></i> Agra, Uttar Pradesh</span>
-                            <h3>The Taj Mahal</h3>
-                            <p>Ivory-white marble mausoleum on the Yamuna river, recognized worldwide as the supreme triumph of Mughal symmetry and eternal devotion.</p>
-                            <div class="heritage-meta-badges">
-                                <span>Pietra Dura Inlay</span>
-                                <span>1632 CE</span>
+                    </div>
+                    <div class="feature-panel-content">
+                        <div class="feature-meta-loc">
+                            <i class="fa-solid fa-location-dot"></i> Agra, Uttar Pradesh • Yamuna Basin
+                        </div>
+                        <h3 class="feature-title">The Taj Mahal &amp; Yamuna Riverbank Complex</h3>
+                        <p class="feature-desc">
+                            Commissioned in 1632 CE by Mughal Emperor Shah Jahan to honor Empress Mumtaz Mahal. Renowned globally for absolute octagonal symmetry, subterranean well foundations engineered against seismic stress, and brilliant translucent Makrana white marble.
+                        </p>
+                        
+                        <div class="architectural-specs-grid">
+                            <div class="spec-cell">
+                                <span class="spec-label">Architectural Order</span>
+                                <strong class="spec-value">Indo-Islamic Classical</strong>
                             </div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s monument-detail-btn" data-dest-id="agra">Explore Monument &rarr;</button>
+                            <div class="spec-cell">
+                                <span class="spec-label">Inlay Technique</span>
+                                <strong class="spec-value">Pietra Dura (Parchin Kari)</strong>
+                            </div>
+                            <div class="spec-cell">
+                                <span class="spec-label">Construction Era</span>
+                                <strong class="spec-value">1632 &ndash; 1653 CE</strong>
+                            </div>
+                            <div class="spec-cell">
+                                <span class="spec-label">Preservation Custodian</span>
+                                <strong class="spec-value">Archaeological Survey of India</strong>
+                            </div>
+                        </div>
+
+                        <div class="feature-actions">
+                            <button type="button" class="ux4g-btn ux4g-btn-primary ux4g-btn-s monument-detail-btn" data-dest-id="agra">
+                                <i class="fa-solid fa-compass"></i> Explore Architectural Dossier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="heritage-directory-grid">
+                    
+                    <div class="ux4g-card heritage-entry-card">
+                        <div class="heritage-entry-img">
+                            <img src="images/heritage-qutub.jpg" alt="Qutub Minar, New Delhi">
+                            <span class="entry-epoch-tag">1199 CE</span>
+                        </div>
+                        <div class="heritage-entry-body">
+                            <span class="entry-geo"><i class="fa-solid fa-location-dot"></i> Mehrauli, New Delhi</span>
+                            <h4>Qutub Minar Complex</h4>
+                            <p>World's tallest brick minaret at 72.5m, accompanied by the enigmatic 4th-century rust-resistant Iron Pillar of Chandragupta II.</p>
+                            <div class="entry-spec-line">
+                                <span>Red Sandstone &amp; Marble</span> &bull; <span>Mamluk Dynasty</span>
+                            </div>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs monument-detail-btn" data-dest-id="qutub">View Monument &rarr;</button>
                         </div>
                     </div>
 
-                    <!-- 2. Qutub Minar -->
-                    <div class="ux4g-card heritage-portal-card">
-                        <div class="heritage-img-box">
-                            <img src="images/heritage-qutub.jpg" alt="Qutub Minar, New Delhi" loading="lazy">
-                            <span class="unesco-tag"><i class="fa-solid fa-award"></i> UNESCO Site</span>
+                    
+                    <div class="ux4g-card heritage-entry-card">
+                        <div class="heritage-entry-img">
+                            <img src="images/heritage-konark.jpg" alt="Konark Sun Temple, Odisha">
+                            <span class="entry-epoch-tag">13th Cent.</span>
                         </div>
-                        <div class="heritage-body-box">
-                            <span class="heritage-loc"><i class="fa-solid fa-location-dot"></i> New Delhi</span>
-                            <h3>Qutub Minar Complex</h3>
-                            <p>The world's tallest brick minaret at 72.5 meters, accompanied by the enigmatic 4th-century rust-resistant Iron Pillar of Chandragupta II.</p>
-                            <div class="heritage-meta-badges">
-                                <span>Red Sandstone</span>
-                                <span>1199 CE</span>
+                        <div class="heritage-entry-body">
+                            <span class="entry-geo"><i class="fa-solid fa-location-dot"></i> Konark, Odisha</span>
+                            <h4>Konark Sun Temple</h4>
+                            <p>Colossal stone chariot of Surya carved with 24 giant wheels that act as precise astronomical solar chronometers.</p>
+                            <div class="entry-spec-line">
+                                <span>Kalinga Style</span> &bull; <span>Eastern Ganga Dynasty</span>
                             </div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s monument-detail-btn" data-dest-id="qutub">Explore Monument &rarr;</button>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs monument-detail-btn" data-dest-id="konark">View Monument &rarr;</button>
                         </div>
                     </div>
 
-                    <!-- 3. Konark Sun Temple -->
-                    <div class="ux4g-card heritage-portal-card">
-                        <div class="heritage-img-box">
-                            <img src="images/heritage-konark.jpg" alt="Konark Sun Temple, Odisha" loading="lazy">
-                            <span class="unesco-tag"><i class="fa-solid fa-award"></i> UNESCO Site</span>
+                    
+                    <div class="ux4g-card heritage-entry-card">
+                        <div class="heritage-entry-img">
+                            <img src="images/heritage-ajanta.jpg" alt="Ajanta and Ellora Rock Caves, Maharashtra">
+                            <span class="entry-epoch-tag">8th Cent.</span>
                         </div>
-                        <div class="heritage-body-box">
-                            <span class="heritage-loc"><i class="fa-solid fa-location-dot"></i> Konark, Odisha</span>
-                            <h3>Konark Sun Temple</h3>
-                            <p>A colossal stone chariot of Surya the Sun God carved with 24 giant wheels that act as precise astronomical solar chronometers.</p>
-                            <div class="heritage-meta-badges">
-                                <span>Kalinga Style</span>
-                                <span>13th Century</span>
+                        <div class="heritage-entry-body">
+                            <span class="entry-geo"><i class="fa-solid fa-location-dot"></i> Aurangabad, Maharashtra</span>
+                            <h4>Kailasa Temple &amp; Ellora</h4>
+                            <p>Earth's largest monolithic excavation, carved top-down from single basalt cliff, removing 200,000 tons of mountain.</p>
+                            <div class="entry-spec-line">
+                                <span>Monolithic Basalt</span> &bull; <span>Rashtrakuta Dynasty</span>
                             </div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s monument-detail-btn" data-dest-id="konark">Explore Monument &rarr;</button>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs monument-detail-btn" data-dest-id="ellora">View Monument &rarr;</button>
                         </div>
                     </div>
 
-                    <!-- 4. Ajanta & Ellora Caves -->
-                    <div class="ux4g-card heritage-portal-card">
-                        <div class="heritage-img-box">
-                            <img src="images/heritage-ajanta.jpg" alt="Ajanta and Ellora Rock Caves, Maharashtra" loading="lazy">
-                            <span class="unesco-tag"><i class="fa-solid fa-award"></i> UNESCO Site</span>
+                    
+                    <div class="ux4g-card heritage-entry-card">
+                        <div class="heritage-entry-img">
+                            <img src="images/dest-hampi.jpg" alt="Hampi Vijayanagara Chariot, Karnataka">
+                            <span class="entry-epoch-tag">15th Cent.</span>
                         </div>
-                        <div class="heritage-body-box">
-                            <span class="heritage-loc"><i class="fa-solid fa-location-dot"></i> Aurangabad, Maharashtra</span>
-                            <h3>Kailasa Temple & Ellora</h3>
-                            <p>The largest monolithic rock-cut excavation on earth, carved top-down from a single basalt cliff, removing 200,000 tons of solid mountain.</p>
-                            <div class="heritage-meta-badges">
-                                <span>Monolithic Rock</span>
-                                <span>8th Century</span>
+                        <div class="heritage-entry-body">
+                            <span class="entry-geo"><i class="fa-solid fa-location-dot"></i> Ballari, Karnataka</span>
+                            <h4>Stone Chariot of Hampi</h4>
+                            <p>Shrine to Garuda in Vijaya Vittala Temple, amidst the boulder-strewn moonscape of the 14th-century Vijayanagara Empire.</p>
+                            <div class="entry-spec-line">
+                                <span>Dravidian Stone</span> &bull; <span>Vijayanagara Empire</span>
                             </div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s monument-detail-btn" data-dest-id="ellora">Explore Monument &rarr;</button>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs monument-detail-btn" data-dest-id="hampi">View Monument &rarr;</button>
                         </div>
                     </div>
 
-                    <!-- 5. Hampi Stone Chariot & Vijayanagara -->
-                    <div class="ux4g-card heritage-portal-card">
-                        <div class="heritage-img-box">
-                            <img src="images/dest-hampi.jpg" alt="Hampi Vijayanagara Chariot, Karnataka" loading="lazy">
-                            <span class="unesco-tag"><i class="fa-solid fa-award"></i> UNESCO Site</span>
+                    
+                    <div class="ux4g-card heritage-entry-card">
+                        <div class="heritage-entry-img">
+                            <img src="images/heritage-redfort.jpg" alt="Red Fort Complex, Old Delhi">
+                            <span class="entry-epoch-tag">1648 CE</span>
                         </div>
-                        <div class="heritage-body-box">
-                            <span class="heritage-loc"><i class="fa-solid fa-location-dot"></i> Ballari, Karnataka</span>
-                            <h3>Stone Chariot of Hampi</h3>
-                            <p>Shrine dedicated to Garuda inside the Vijaya Vittala Temple, set amidst the boulder-strewn moonscape of the legendary 14th-century Vijayanagara Empire.</p>
-                            <div class="heritage-meta-badges">
-                                <span>Dravidian Stone</span>
-                                <span>15th Century</span>
+                        <div class="heritage-entry-body">
+                            <span class="entry-geo"><i class="fa-solid fa-location-dot"></i> Shahjahanabad, Old Delhi</span>
+                            <h4>Red Fort (Lal Qila)</h4>
+                            <p>Monumental red sandstone citadel built by Emperor Shah Jahan in 1648, zenith of Mughal architectural creativity.</p>
+                            <div class="entry-spec-line">
+                                <span>Red Sandstone</span> &bull; <span>Mughal Dynasty</span>
                             </div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s monument-detail-btn" data-dest-id="hampi">Explore Monument &rarr;</button>
-                        </div>
-                    </div>
-
-                    <!-- 6. Red Fort Complex (Lal Qila) -->
-                    <div class="ux4g-card heritage-portal-card">
-                        <div class="heritage-img-box">
-                            <img src="images/heritage-redfort.jpg" alt="Red Fort Complex, Old Delhi" loading="lazy">
-                            <span class="unesco-tag"><i class="fa-solid fa-award"></i> UNESCO Site</span>
-                        </div>
-                        <div class="heritage-body-box">
-                            <span class="heritage-loc"><i class="fa-solid fa-location-dot"></i> Old Delhi</span>
-                            <h3>Red Fort Complex (Lal Qila)</h3>
-                            <p>The monumental red sandstone citadel built by Emperor Shah Jahan in 1648, representing the zenith of Mughal creativity and India's national independence symbolism.</p>
-                            <div class="heritage-meta-badges">
-                                <span>Imperial Mughal</span>
-                                <span>1648 CE</span>
-                            </div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s monument-detail-btn" data-dest-id="redfort">Explore Monument &rarr;</button>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs monument-detail-btn" data-dest-id="redfort">View Monument &rarr;</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===================================================================
-             9. LOCAL FOOD & CULINARY TRADITIONS
-             Regional Gastronomy & Dietary Guidance
-             =================================================================== -->
+        
         <section class="gov-section cuisine-section" id="cuisine">
             <div class="gov-container">
                 <div class="gov-section-header">
-                    <div class="section-badge-gov">
-                        <i class="fa-solid fa-bowl-food"></i> CULINARY HERITAGE
+                    <div class="section-kicker-gov">
+                        <i class="fa-solid fa-bowl-food"></i> <span>CULINARY HERITAGE &amp; GASTRONOMY GAZETTEER</span>
                     </div>
-                    <h2 class="gov-section-title" id="cuisineTitle">Regional Gastronomy & Flavors of India</h2>
+                    <h2 class="gov-section-title" id="cuisineTitle">Regional Gastronomy &amp; Flavors of India</h2>
                     <p class="gov-section-subtitle" id="cuisineSubtitle">
                         From slow-cooked royal Awadhi handis to coastal Malabar spices, crisp fermentations, and traditional vegetarian feasts.
                     </p>
                 </div>
 
-                <div class="cuisine-portal-grid">
-                    <div class="ux4g-card food-card">
-                        <div class="food-img-wrap">
-                            <img src="images/food-biryani.jpg" alt="Hyderabadi Dum Biryani" loading="lazy">
-                            <span class="food-tag">Royal Spiced</span>
-                        </div>
-                        <div class="food-card-body">
-                            <span class="food-region">Telangana & Awadh</span>
-                            <h3>Hyderabadi Dum Biryani</h3>
-                            <p>Aged basmati rice slow-cooked in sealed clay pots with saffron, fried onions, and whole cardamoms.</p>
-                            <div class="food-pairing"><strong>Accompaniment:</strong> Mirchi ka Salan & Dahi Raita</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="biryani">View Food Trail &rarr;</button>
+                
+                <div class="culinary-standards-bar">
+                    <div class="standard-item">
+                        <span class="standard-dot veg-dot"></span>
+                        <div class="standard-text">
+                            <strong>FSSAI Green Dot Standard</strong>
+                            <span>Extensive 100% Pure Vegetarian network</span>
                         </div>
                     </div>
-
-                    <div class="ux4g-card food-card">
-                        <div class="food-img-wrap">
-                            <img src="images/food-dosa.jpg" alt="South Indian Masala Dosa" loading="lazy">
-                            <span class="food-tag">Crisp & Fermented</span>
-                        </div>
-                        <div class="food-card-body">
-                            <span class="food-region">Tamil Nadu & Karnataka</span>
-                            <h3>Mysore Masala Dosa</h3>
-                            <p>Thin golden fermented crepe lined with red garlic chutney and spiced potato masala, served with coconut chutney.</p>
-                            <div class="food-pairing"><strong>Accompaniment:</strong> Traditional Filter Kaapi</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="dosa">View Food Trail &rarr;</button>
+                    <div class="standard-item">
+                        <i class="fa-solid fa-seedling standard-icon"></i>
+                        <div class="standard-text">
+                            <strong>Shree Anna Initiative</strong>
+                            <span>Indigenous heritage millets &amp; grains</span>
                         </div>
                     </div>
-
-                    <div class="ux4g-card food-card">
-                        <div class="food-img-wrap">
-                            <img src="images/food-thali.jpg" alt="Royal Rajasthani Thali" loading="lazy">
-                            <span class="food-tag">Grand Feast</span>
-                        </div>
-                        <div class="food-card-body">
-                            <span class="food-region">Rajasthan & Gujarat</span>
-                            <h3>Royal Heritage Thali</h3>
-                            <p>An extravagant circular platter with Dal Baati Churma, Gatte ki Sabzi, Ker Sangri, and hot rotis with desi ghee.</p>
-                            <div class="food-pairing"><strong>Accompaniment:</strong> Spiced Buttermilk (Chhach)</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="thali">View Food Trail &rarr;</button>
+                    <div class="standard-item">
+                        <i class="fa-solid fa-fire-burner standard-icon"></i>
+                        <div class="standard-text">
+                            <strong>Dum-Pukht &amp; Clay Handi</strong>
+                            <span>Centuries-old slow cooking techniques</span>
                         </div>
                     </div>
-
-                    <div class="ux4g-card food-card">
-                        <div class="food-img-wrap">
-                            <img src="images/food-chaat.jpg" alt="Old Delhi Street Chaat" loading="lazy">
-                            <span class="food-tag">Tangy & Zesty</span>
-                        </div>
-                        <div class="food-card-body">
-                            <span class="food-region">Old Delhi & Varanasi</span>
-                            <h3>Legendary Street Chaat</h3>
-                            <p>Crispy puris, tangy tamarind chutney, mint-coriander water, whipped yoghurt, and sev that define Indian bazaars.</p>
-                            <div class="food-pairing"><strong>Iconic Treats:</strong> Pani Puri & Dahi Bhalla</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="chaat">View Food Trail &rarr;</button>
-                        </div>
-                    </div>
-
-                    <div class="ux4g-card food-card">
-                        <div class="food-img-wrap">
-                            <img src="images/food-sweets.jpg" alt="Indian Traditional Sweets & Mithai" loading="lazy">
-                            <span class="food-tag">Sweet Indulgence</span>
-                        </div>
-                        <div class="food-card-body">
-                            <span class="food-region">Pan-India • Bengal & North</span>
-                            <h3>Mithai & Traditional Desserts</h3>
-                            <p>Spongy Bengali Rasgulla, pistachio Gulab Jamun, Mysore Pak, and delicate saffron Jalebi soaked in fragrant cardamom syrup.</p>
-                            <div class="food-pairing"><strong>Specialty:</strong> Saffron Rabri & Kheer</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="sweets">View Food Trail &rarr;</button>
+                    <div class="standard-item">
+                        <i class="fa-solid fa-certificate standard-icon"></i>
+                        <div class="standard-text">
+                            <strong>GI-Tagged Specialties</strong>
+                            <span>Geographical indications of authenticity</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dietary Guidance Notice -->
+                <div class="cuisine-portal-grid">
+                    
+                    <div class="ux4g-card food-card">
+                        <div class="food-img-wrap">
+                            <img src="images/food-biryani.jpg" alt="Hyderabadi Dum Biryani">
+                            <span class="food-origin-tag">Deccani Royal Court</span>
+                        </div>
+                        <div class="food-card-body">
+                            <div class="food-badge-meta">
+                                <span class="badge-style">Clay Pot Dum-Pukht</span>
+                            </div>
+                            <h3>Hyderabadi Dum Biryani</h3>
+                            <p>Aged long-grain basmati rice slow-cooked in dough-sealed earthen handis with saffron milk, caramelized shallots, and whole spice infusions.</p>
+                            <div class="food-pairing-box">
+                                <span class="p-title">Traditional Pairing:</span>
+                                <span class="p-val">Mirchi ka Salan &amp; Dahi Raita</span>
+                            </div>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="biryani">View Culinary Trail &rarr;</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="ux4g-card food-card">
+                        <div class="food-img-wrap">
+                            <img src="images/food-dosa.jpg" alt="South Indian Masala Dosa">
+                            <span class="food-origin-tag veg-tag">Pure Veg &bull; Dravidian</span>
+                        </div>
+                        <div class="food-card-body">
+                            <div class="food-badge-meta">
+                                <span class="badge-style">Fermented Heritage</span>
+                            </div>
+                            <h3>Mysore Masala Dosa</h3>
+                            <p>Stone-ground fermented rice and black lentil crepe spread with fiery roasted garlic-chilli chutney, stuffed with tempered spiced potato mash.</p>
+                            <div class="food-pairing-box">
+                                <span class="p-title">Traditional Pairing:</span>
+                                <span class="p-val">Coconut Chutney &amp; Filter Kaapi</span>
+                            </div>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="dosa">View Culinary Trail &rarr;</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="ux4g-card food-card">
+                        <div class="food-img-wrap">
+                            <img src="images/food-thali.jpg" alt="Royal Rajasthani Thali">
+                            <span class="food-origin-tag veg-tag">Pure Veg &bull; Marwar</span>
+                        </div>
+                        <div class="food-card-body">
+                            <div class="food-badge-meta">
+                                <span class="badge-style">Ceremonial Feast</span>
+                            </div>
+                            <h3>Royal Heritage Thali</h3>
+                            <p>Extravagant bronze platter balancing six Ayurvedic tastes: Dal Baati Churma, Gatte ki Sabzi, dried desert Ker Sangri berries, and fresh buttermilk.</p>
+                            <div class="food-pairing-box">
+                                <span class="p-title">Traditional Pairing:</span>
+                                <span class="p-val">Chhach &amp; Bajra Roti with Desi Ghee</span>
+                            </div>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="thali">View Culinary Trail &rarr;</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="ux4g-card food-card">
+                        <div class="food-img-wrap">
+                            <img src="images/food-chaat.jpg" alt="Old Delhi Street Chaat">
+                            <span class="food-origin-tag veg-tag">Pure Veg &bull; Bazaars</span>
+                        </div>
+                        <div class="food-card-body">
+                            <div class="food-badge-meta">
+                                <span class="badge-style">Street Gastronomy</span>
+                            </div>
+                            <h3>Historic Street Chaat</h3>
+                            <p>Century-old recipes featuring crisp puffed semolina puris, sun-ripened tamarind chutney, crushed cumin yogurt, and fresh mint herbal waters.</p>
+                            <div class="food-pairing-box">
+                                <span class="p-title">Traditional Pairing:</span>
+                                <span class="p-val">Pani Puri, Dahi Bhalla &amp; Aloo Tikki</span>
+                            </div>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="chaat">View Culinary Trail &rarr;</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="ux4g-card food-card">
+                        <div class="food-img-wrap">
+                            <img src="images/food-sweets.jpg" alt="Indian Traditional Sweets & Mithai">
+                            <span class="food-origin-tag veg-tag">Pure Veg &bull; Pan-India</span>
+                        </div>
+                        <div class="food-card-body">
+                            <div class="food-badge-meta">
+                                <span class="badge-style">Artisanal Patisserie</span>
+                            </div>
+                            <h3>Mithai &amp; Traditional Desserts</h3>
+                            <p>Spongy Bengali Chhena Rasgullas, saffron-infused Pistachio Gulab Jamuns, ghee-drenched Mysore Pak, and hot jalebis dipped in cardamom syrup.</p>
+                            <div class="food-pairing-box">
+                                <span class="p-title">Traditional Pairing:</span>
+                                <span class="p-val">Saffron Rabri, Kheer &amp; Malaiyo</span>
+                            </div>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs food-action-btn" data-food-id="sweets">View Culinary Trail &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                
                 <div class="gov-dietary-banner">
                     <i class="fa-solid fa-circle-check dietary-icon"></i>
                     <div>
@@ -585,105 +647,126 @@
             </div>
         </section>
 
-        <!-- ===================================================================
-             10. FESTIVALS & LIVING TRADITIONS
-             5 Vibrant Cultural Celebrations
-             =================================================================== -->
+        
         <section class="gov-section festivals-section" id="festivals">
             <div class="gov-container">
                 <div class="gov-section-header">
-                    <div class="section-badge-gov">
-                        <i class="fa-solid fa-fan"></i> LIVING TRADITIONS
+                    <div class="section-kicker-gov">
+                        <i class="fa-solid fa-masks-theater"></i> <span>LIVING CULTURAL CALENDAR &amp; RITU CYCLES</span>
                     </div>
-                    <h2 class="gov-section-title" id="festivalsTitle">Festivals & Cultural Celebrations</h2>
+                    <h2 class="gov-section-title" id="festivalsTitle">Festivals &amp; Cultural Celebrations</h2>
                     <p class="gov-section-subtitle" id="festivalsSubtitle">
                         Experience the vibrant communal harmony of India's world-famous festivals of lights, colors, art, and classical dances.
                     </p>
                 </div>
 
-                <div class="festivals-portal-grid">
-                    <!-- Diwali -->
-                    <div class="ux4g-card fest-portal-card">
-                        <div class="fest-img-box">
-                            <img src="images/fest-diwali.jpg" alt="Diwali Festival of Lights" loading="lazy">
-                            <span class="fest-time-pill">Autumn (Oct - Nov)</span>
+                <div class="festivals-calendar-grid">
+                    
+                    <div class="season-block-card">
+                        <div class="season-header-stripe">
+                            <span class="season-name"><i class="fa-solid fa-moon"></i> Sharad Ritu &bull; Autumn</span>
+                            <span class="season-months">October &ndash; November</span>
                         </div>
-                        <div class="fest-card-content">
-                            <h3>Diwali – Festival of Lights</h3>
-                            <p>Triumph of light over darkness. Billions of terracotta oil lamps illuminate ghats, houses, and bazaars across India.</p>
-                            <div class="fest-spot"><i class="fa-solid fa-location-dot"></i> Pan-India • Best at Varanasi Ghats</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="diwali">Explore Festival &rarr;</button>
+                        <div class="season-events-row">
+                            
+                            <div class="ux4g-card fest-event-item">
+                                <div class="fest-event-media">
+                                    <img src="images/fest-diwali.jpg" alt="Diwali Festival of Lights">
+                                    <span class="fest-date-badge">Kartika Amavasya</span>
+                                </div>
+                                <div class="fest-event-details">
+                                    <h4>Diwali &ndash; Festival of Lights</h4>
+                                    <p>Triumph of light over darkness. Billions of earthen terracotta deepams illuminate Varanasi ghats and Indian households nationwide.</p>
+                                    <div class="fest-venue-line"><i class="fa-solid fa-location-dot"></i> Pan-India &bull; Epicenter: Varanasi Ghats</div>
+                                    <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="diwali">Explore Festival &rarr;</button>
+                                </div>
+                            </div>
+
+                            
+                            <div class="ux4g-card fest-event-item">
+                                <div class="fest-event-media">
+                                    <img src="images/fest-durga-puja.jpg" alt="Durga Puja Kolkata">
+                                    <span class="fest-date-badge unesco-badge">UNESCO Intangible</span>
+                                </div>
+                                <div class="fest-event-details">
+                                    <h4>Durga Puja &ndash; Carnival of Art</h4>
+                                    <p>Kolkata transforms into the planet's largest open-air contemporary installation art festival with themed pandals and rhythmic dhak drums.</p>
+                                    <div class="fest-venue-line"><i class="fa-solid fa-location-dot"></i> Kolkata, West Bengal</div>
+                                    <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="durgapuja">Explore Festival &rarr;</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Holi -->
-                    <div class="ux4g-card fest-portal-card">
-                        <div class="fest-img-box">
-                            <img src="images/fest-holi.jpg" alt="Holi Festival of Colors" loading="lazy">
-                            <span class="fest-time-pill">Spring (March)</span>
+                    
+                    <div class="season-block-card">
+                        <div class="season-header-stripe">
+                            <span class="season-name"><i class="fa-solid fa-sun"></i> Vasant Ritu &bull; Spring</span>
+                            <span class="season-months">March</span>
                         </div>
-                        <div class="fest-card-content">
-                            <h3>Holi – Festival of Colors</h3>
-                            <p>Exuberant celebration of spring where communities shower organic colored gulal powders and dance to rhythmic dhol beats.</p>
-                            <div class="fest-spot"><i class="fa-solid fa-location-dot"></i> Mathura, Vrindavan & Jaipur</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="holi">Explore Festival &rarr;</button>
-                        </div>
-                    </div>
-
-                    <!-- Durga Puja -->
-                    <div class="ux4g-card fest-portal-card">
-                        <div class="fest-img-box">
-                            <img src="images/fest-durga-puja.jpg" alt="Durga Puja Kolkata" loading="lazy">
-                            <span class="fest-time-pill">Autumn (Sept - Oct)</span>
-                        </div>
-                        <div class="fest-card-content">
-                            <h3>Durga Puja – Carnival of Art</h3>
-                            <p>Inscribed on UNESCO Intangible Cultural Heritage list. Kolkata transforms into the world's largest open-air art exhibition.</p>
-                            <div class="fest-spot"><i class="fa-solid fa-location-dot"></i> Kolkata, West Bengal</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="durgapuja">Explore Festival &rarr;</button>
+                        <div class="season-events-row single-event">
+                            
+                            <div class="ux4g-card fest-event-item">
+                                <div class="fest-event-media">
+                                    <img src="images/fest-holi.jpg" alt="Holi Festival of Colors">
+                                    <span class="fest-date-badge">Phalguna Purnima</span>
+                                </div>
+                                <div class="fest-event-details">
+                                    <h4>Holi &ndash; Festival of Colors</h4>
+                                    <p>Exuberant celebration of spring renewal where communities celebrate with organic floral gulal powders, folk dhol drums, and traditional thandai.</p>
+                                    <div class="fest-venue-line"><i class="fa-solid fa-location-dot"></i> Mathura, Vrindavan &amp; Jaipur</div>
+                                    <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="holi">Explore Festival &rarr;</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Pushkar Camel Fair -->
-                    <div class="ux4g-card fest-portal-card">
-                        <div class="fest-img-box">
-                            <img src="images/fest-pushkar.jpg" alt="Pushkar Camel Fair Rajasthan" loading="lazy">
-                            <span class="fest-time-pill">Winter (November)</span>
+                    
+                    <div class="season-block-card">
+                        <div class="season-header-stripe">
+                            <span class="season-name"><i class="fa-solid fa-feather"></i> Hemant &amp; Classical Performing Arts</span>
+                            <span class="season-months">November &bull; Year-Round</span>
                         </div>
-                        <div class="fest-card-content">
-                            <h3>Pushkar Camel Fair</h3>
-                            <p>An extraordinary desert gathering bringing 50,000 decorated camels, folk musicians, and sacred dip rituals in Pushkar Lake.</p>
-                            <div class="fest-spot"><i class="fa-solid fa-location-dot"></i> Pushkar, Rajasthan</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="pushkar">Explore Festival &rarr;</button>
-                        </div>
-                    </div>
+                        <div class="season-events-row">
+                            
+                            <div class="ux4g-card fest-event-item">
+                                <div class="fest-event-media">
+                                    <img src="images/fest-pushkar.jpg" alt="Pushkar Camel Fair Rajasthan">
+                                    <span class="fest-date-badge">Kartik Purnima</span>
+                                </div>
+                                <div class="fest-event-details">
+                                    <h4>Pushkar Camel Fair</h4>
+                                    <p>Vibrant Thar desert pastoral gathering bringing 50,000 decorated camels, folk musicians, and holy dips in Pushkar's sacred lake.</p>
+                                    <div class="fest-venue-line"><i class="fa-solid fa-location-dot"></i> Pushkar, Rajasthan</div>
+                                    <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="pushkar">Explore Festival &rarr;</button>
+                                </div>
+                            </div>
 
-                    <!-- Kathakali Classical Dance -->
-                    <div class="ux4g-card fest-portal-card">
-                        <div class="fest-img-box">
-                            <img src="images/fest-kathakali.jpg" alt="Kathakali Dance of Kerala" loading="lazy">
-                            <span class="fest-time-pill">Year-Round Evenings</span>
-                        </div>
-                        <div class="fest-card-content">
-                            <h3>Kathakali & Temple Theatre</h3>
-                            <p>300-year-old classical performing art with elaborate facial makeup, towering headdresses, and dramatic mudra storytelling.</p>
-                            <div class="fest-spot"><i class="fa-solid fa-location-dot"></i> Kochi & Thrissur, Kerala</div>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="kathakali">Explore Festival &rarr;</button>
+                            
+                            <div class="ux4g-card fest-event-item">
+                                <div class="fest-event-media">
+                                    <img src="images/fest-kathakali.jpg" alt="Kathakali Dance of Kerala">
+                                    <span class="fest-date-badge">Living Heritage</span>
+                                </div>
+                                <div class="fest-event-details">
+                                    <h4>Kathakali &amp; Temple Theatre</h4>
+                                    <p>Classical dance drama combining elaborate mineral facial makeup (Chutti), symbolic mudra hand gestures, and rhythmic Chenda drumming.</p>
+                                    <div class="fest-venue-line"><i class="fa-solid fa-location-dot"></i> Kochi &amp; Thrissur, Kerala</div>
+                                    <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-xs fest-action-btn" data-fest="kathakali">Explore Festival &rarr;</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===================================================================
-             11. TRAVEL EXPERIENCES & PHOTO GALLERY
-             High-Resolution Moments Across Incredible India
-             =================================================================== -->
+        
         <section class="gov-section gallery-section" id="gallery">
             <div class="gov-container">
                 <div class="gov-section-header">
-                    <div class="section-badge-gov">
-                        <i class="fa-solid fa-camera-retro"></i> VISUAL CHRONICLES
+                    <div class="section-kicker-gov">
+                        <i class="fa-solid fa-camera-retro"></i> <span>PHOTOGRAPHIC ARCHIVE &bull; EXPERIENCES</span>
                     </div>
                     <h2 class="gov-section-title" id="galleryTitle">Travel Experiences & Moments Gallery</h2>
                     <p class="gov-section-subtitle" id="gallerySubtitle">
@@ -700,9 +783,9 @@
                 </div>
 
                 <div class="gallery-grid" id="galleryGrid">
-                    <!-- Item 1: Darjeeling Himalayan Railway -->
+                    
                     <div class="gallery-item" data-category="heritage">
-                        <img src="images/gallery-train.jpg" alt="Darjeeling Himalayan Railway Toy Train" loading="lazy">
+                        <img src="images/gallery-train.jpg" alt="Darjeeling Himalayan Railway Toy Train">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">UNESCO Railway</span>
                             <h4>Darjeeling Himalayan Toy Train</h4>
@@ -711,9 +794,9 @@
                         </div>
                     </div>
 
-                    <!-- Item 2: Royal Bengal Tiger Safari -->
+                    
                     <div class="gallery-item" data-category="wildlife">
-                        <img src="images/gallery-wildlife.jpg" alt="Royal Bengal Tiger in Ranthambore" loading="lazy">
+                        <img src="images/gallery-wildlife.jpg" alt="Royal Bengal Tiger in Ranthambore">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">National Wildlife</span>
                             <h4>Royal Bengal Tiger Safaris</h4>
@@ -722,9 +805,9 @@
                         </div>
                     </div>
 
-                    <!-- Item 3: Evening Ganga Aarti at Varanasi -->
+                    
                     <div class="gallery-item" data-category="spiritual">
-                        <img src="images/gallery-aarti.jpg" alt="Evening Ganga Aarti at Varanasi Dashashwamedh Ghat" loading="lazy">
+                        <img src="images/gallery-aarti.jpg" alt="Evening Ganga Aarti at Varanasi Dashashwamedh Ghat">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">Sacred Ceremony</span>
                             <h4>Maha Ganga Aarti at Varanasi</h4>
@@ -733,9 +816,9 @@
                         </div>
                     </div>
 
-                    <!-- Item 4: Western Ghats Spice Plantations -->
+                    
                     <div class="gallery-item" data-category="hills">
-                        <img src="images/gallery-spices.jpg" alt="Spice Plantations of Thekkady and Wayanad" loading="lazy">
+                        <img src="images/gallery-spices.jpg" alt="Spice Plantations of Thekkady and Wayanad">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">Spice Trail</span>
                             <h4>Fragrant Spice Plantations</h4>
@@ -744,9 +827,9 @@
                         </div>
                     </div>
 
-                    <!-- Item 5: Kerala Backwaters Houseboat -->
+                    
                     <div class="gallery-item" data-category="heritage">
-                        <img src="images/dest-kerala.jpg" alt="Luxury Houseboat on Alleppey Backwaters" loading="lazy">
+                        <img src="images/dest-kerala.jpg" alt="Luxury Houseboat on Alleppey Backwaters">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">Tropical Backwaters</span>
                             <h4>Alleppey Kettuvallam Cruise</h4>
@@ -755,9 +838,9 @@
                         </div>
                     </div>
 
-                    <!-- Item 6: High-Altitude Ladakh Landscapes -->
+                    
                     <div class="gallery-item" data-category="hills">
-                        <img src="images/dest-ladakh.jpg" alt="Crystal Pangong Tso Lake, Ladakh" loading="lazy">
+                        <img src="images/dest-ladakh.jpg" alt="Crystal Pangong Tso Lake, Ladakh">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">Trans-Himalayas</span>
                             <h4>Pangong Tso & High Passes</h4>
@@ -766,9 +849,9 @@
                         </div>
                     </div>
 
-                    <!-- Item 7: Rishikesh Ganges Yoga & Serenity -->
+                    
                     <div class="gallery-item" data-category="spiritual">
-                        <img src="images/dest-rishikesh.jpg" alt="Yoga on the Ganges River, Rishikesh" loading="lazy">
+                        <img src="images/dest-rishikesh.jpg" alt="Yoga on the Ganges River, Rishikesh">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">Yoga Capital</span>
                             <h4>Meditation on the Ganges</h4>
@@ -777,9 +860,9 @@
                         </div>
                     </div>
 
-                    <!-- Item 8: Golden Temple Sanctum Harmony -->
+                    
                     <div class="gallery-item" data-category="spiritual">
-                        <img src="images/dest-amritsar.jpg" alt="Harmandir Sahib Golden Temple Amritsar" loading="lazy">
+                        <img src="images/dest-amritsar.jpg" alt="Harmandir Sahib Golden Temple Amritsar">
                         <div class="gallery-overlay">
                             <span class="gallery-tag">Universal Brotherhood</span>
                             <h4>Harmandir Sahib (Amritsar)</h4>
@@ -791,15 +874,12 @@
             </div>
         </section>
 
-        <!-- ===================================================================
-             12. SMART TRIP PLANNER ASSISTANT
-             Interactive Logistics Circuit Generator
-             =================================================================== -->
+        
         <section class="gov-section planner-section" id="planner">
             <div class="gov-container">
                 <div class="gov-section-header">
-                    <div class="section-badge-gov">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> SMART ASSISTANT
+                    <div class="section-kicker-gov">
+                        <i class="fa-solid fa-route"></i> <span>TRAVEL LOGISTICS WORKBENCH</span>
                     </div>
                     <h2 class="gov-section-title" id="plannerTitle">Interactive India Travel Planner</h2>
                     <p class="gov-section-subtitle" id="plannerSubtitle">
@@ -810,86 +890,140 @@
                 <div class="ux4g-card gov-planner-card">
                     <form id="tripPlannerForm" class="planner-form-grid">
                         <div class="planner-field">
-                            <label for="travelSeason" class="p-label"><i class="fa-solid fa-cloud-sun"></i> 1. Travel Season</label>
+                            <label for="travelOrigin" class="p-label"><i class="fa-solid fa-plane-arrival"></i> 1. Gateway Hub</label>
+                            <select id="travelOrigin" class="ux4g-input ux4g-input-m" required>
+                                <option value="delhi" selected>New Delhi (DEL / NDLS) • Northern Gateway</option>
+                                <option value="mumbai">Mumbai (BOM / CSMT) • Western Gateway</option>
+                                <option value="bengaluru">Bengaluru (BLR) • Deccan Gateway</option>
+                                <option value="kolkata">Kolkata (CCU / HWH) • Eastern Gateway</option>
+                                <option value="kochi">Kochi (COK) • Malabar Gateway</option>
+                                <option value="chennai">Chennai (MAA) • Coromandel Gateway</option>
+                            </select>
+                        </div>
+
+                        <div class="planner-field">
+                            <label for="travelSeason" class="p-label"><i class="fa-solid fa-cloud-sun"></i> 2. Travel Season</label>
                             <select id="travelSeason" class="ux4g-input ux4g-input-m" required>
-                                <option value="winter">Winter (Oct - Mar) • Peak pleasant climate</option>
-                                <option value="summer">Summer (Apr - Jun) • Perfect for Himalayan hills</option>
-                                <option value="monsoon">Monsoon (Jul - Sep) • Lush greens & waterfalls</option>
+                                <option value="winter" selected>Winter (Oct - Mar) • Crisp &amp; Pleasant (15°C – 26°C)</option>
+                                <option value="summer">Summer (Apr - Jun) • Himalayan &amp; High Altitude</option>
+                                <option value="monsoon">Monsoon (Jul - Sep) • Ghats, Rain Forests &amp; Ayurveda</option>
                             </select>
                         </div>
 
                         <div class="planner-field">
-                            <label for="travelStyle" class="p-label"><i class="fa-solid fa-heart"></i> 2. Travel Style & Interest</label>
+                            <label for="travelStyle" class="p-label"><i class="fa-solid fa-compass"></i> 3. Experience Theme</label>
                             <select id="travelStyle" class="ux4g-input ux4g-input-m" required>
-                                <option value="heritage">Heritage & Royal Architecture</option>
-                                <option value="spiritual">Spiritual Peace & Sacred Ghats</option>
-                                <option value="nature">Nature, Backwaters & Wildlife</option>
-                                <option value="adventure">Himalayan Adventure & High Passes</option>
-                                <option value="coastal">Coastal Leisure & Beaches</option>
+                                <option value="heritage" selected>Golden Triangle &amp; Royal Forts</option>
+                                <option value="spiritual">Sacred Ghats &amp; River Confluences</option>
+                                <option value="nature">Kerala Backwaters &amp; Spice Trails</option>
+                                <option value="adventure">High Altitude Himalayan Passes</option>
+                                <option value="coastal">Goa &amp; Konkan Coastal Heritage</option>
+                                <option value="northeast">Meghalaya Living Root Bridges</option>
                             </select>
                         </div>
 
                         <div class="planner-field">
-                            <label for="travelDuration" class="p-label"><i class="fa-solid fa-calendar-days"></i> 3. Duration</label>
+                            <label for="travelDuration" class="p-label"><i class="fa-solid fa-calendar-days"></i> 4. Duration</label>
                             <select id="travelDuration" class="ux4g-input ux4g-input-m" required>
-                                <option value="short">Short Getaway (3 - 5 Days)</option>
-                                <option value="classic" selected>Classic Circuit (7 - 10 Days)</option>
-                                <option value="grand">Grand Explorer (14 - 21 Days)</option>
+                                <option value="short">4 Days • Express Gateway</option>
+                                <option value="classic" selected>7 Days • Classic Circuit</option>
+                                <option value="grand">12 Days • In-Depth Expedition</option>
+                            </select>
+                        </div>
+
+                        <div class="planner-field">
+                            <label for="travelBudgetTier" class="p-label"><i class="fa-solid fa-wallet"></i> 5. Budget Tier</label>
+                            <select id="travelBudgetTier" class="ux4g-input ux4g-input-m" required>
+                                <option value="backpacker">Backpacker (₹1,800 – ₹3,000 / $22 – $36/day)</option>
+                                <option value="comfort" selected>Comfort Heritage (₹4,500 – ₹9,500 / $55 – $115/day)</option>
+                                <option value="luxury">Palace Luxury (₹16,000 – ₹38,000+ / $195 – $460+/day)</option>
+                            </select>
+                        </div>
+
+                        <div class="planner-field">
+                            <label for="travelCompanion" class="p-label"><i class="fa-solid fa-user-group"></i> 6. Traveler Profile</label>
+                            <select id="travelCompanion" class="ux4g-input ux4g-input-m" required>
+                                <option value="couple" selected>Couple / Duo Travelers</option>
+                                <option value="solo">Solo Explorer</option>
+                                <option value="family">Family with Children / Seniors</option>
+                                <option value="group">Friends Group Expedition</option>
                             </select>
                         </div>
 
                         <div class="planner-field submit-col">
                             <button type="submit" class="ux4g-btn ux4g-btn-primary ux4g-btn-m ux4g-btn-block" id="generateItineraryBtn">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Itinerary
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Verified Itinerary
                             </button>
                         </div>
                     </form>
 
-                    <!-- Dynamic Itinerary Result Output -->
+                    
                     <div class="planner-output-display" id="itineraryResult">
                         <div class="itin-header-row">
-                            <span class="itin-badge" id="itineraryBadge">Recommended Circuit • CLASSIC</span>
-                            <h3 id="itineraryTitle">The Golden Triangle & Royal Heritage Circuit</h3>
-                            <p id="itinerarySubtitle">Delhi • Agra (Taj Mahal) • Jaipur • Pushkar</p>
+                            <div class="itin-header-badges">
+                                <span class="itin-badge" id="itineraryBadge">Recommended Circuit • 7 DAYS</span>
+                                <span class="itin-tier-badge" id="itineraryTierBadge">Comfort Heritage</span>
+                            </div>
+                            <h3 id="itineraryTitle">The Golden Triangle &amp; Royal Haveli Circuit</h3>
+                            <p id="itinerarySubtitle">New Delhi &bull; Agra (Taj Mahal) &bull; Fatehpur Sikri &bull; Jaipur Pink City</p>
                         </div>
 
                         <div class="itin-spec-grid">
                             <div class="itin-stat-card">
-                                <i class="fa-solid fa-route"></i>
+                                <i class="fa-solid fa-train-subway"></i>
                                 <div>
-                                    <h5>Suggested Route</h5>
-                                    <p id="itineraryRoute">Fly into New Delhi &rarr; Express train to Agra &rarr; Drive to Jaipur Pink City &rarr; Return to Delhi</p>
+                                    <h5>Verified Transit Rails</h5>
+                                    <p id="itineraryRoute">Gatimaan Express (Train 12050, 100 mins NZM &rarr; AGC) &bull; NH48 Express Highway to Jaipur &bull; Vande Bharat 20978 to Delhi</p>
                                 </div>
                             </div>
                             <div class="itin-stat-card">
-                                <i class="fa-solid fa-temperature-half"></i>
+                                <i class="fa-solid fa-cloud-sun"></i>
                                 <div>
-                                    <h5>Climate Window</h5>
-                                    <p id="itineraryClimate">October to March (Sunny crisp days: 15°C - 26°C)</p>
+                                    <h5>Climate &amp; Attire Guidance</h5>
+                                    <p id="itineraryClimate">October – March: 14°C to 26°C. Layered cottons, light woolen shawls for morning mist, temple-compliant knee/shoulder coverage.</p>
                                 </div>
                             </div>
                             <div class="itin-stat-card">
-                                <i class="fa-solid fa-wallet"></i>
+                                <i class="fa-solid fa-coins"></i>
                                 <div>
-                                    <h5>Budget Range</h5>
-                                    <p id="itineraryBudget">₹3,500 - ₹8,000 per day ($40 - $95 USD including heritage stays)</p>
+                                    <h5>Daily Budget Breakdown</h5>
+                                    <p id="itineraryBudget">₹5,200/day ($63 USD) &bull; Boutique haveli stay ₹3,200 &bull; Dining ₹1,200 &bull; ASI entry &amp; local cab ₹800</p>
                                 </div>
                             </div>
                             <div class="itin-stat-card">
-                                <i class="fa-solid fa-gem"></i>
+                                <i class="fa-solid fa-utensils"></i>
                                 <div>
-                                    <h5>Signature Experience</h5>
-                                    <p id="itineraryHighlight">Dawn viewing of Taj Mahal followed by sunset at Nahargarh Fort overlooking Jaipur.</p>
+                                    <h5>Curated Stays &amp; Culinary Landmarks</h5>
+                                    <p id="itineraryHighlight">Haveli Dharampura (Delhi) &bull; Peshawri / ITC Mughal (Agra) &bull; Rawat Mishtan Pyaaz Kachori &amp; LMB (Jaipur)</p>
                                 </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="itin-schedule-wrapper">
+                            <div class="itin-schedule-header">
+                                <h4><i class="fa-solid fa-calendar-check"></i> Day-by-Day Verified Schedule</h4>
+                                <span class="itin-schedule-hint">Select a day tab to view hourly transit, ASI ticket portals &amp; local logistics</span>
+                            </div>
+                            
+                            <div class="itin-day-pills-bar" id="itineraryDayPills" role="tablist">
+                                
+                            </div>
+
+                            <div class="itin-day-content-card" id="itineraryDayContent">
+                                
                             </div>
                         </div>
 
                         <div class="itin-actions-bar">
                             <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-m" id="saveTripBtn">
-                                <i class="fa-solid fa-bookmark"></i> Save This Circuit
+                                <i class="fa-solid fa-copy"></i> Copy Itinerary Summary
+                            </button>
+                            <button type="button" class="ux4g-btn ux4g-btn-outline-secondary ux4g-btn-m" id="printTripBtn">
+                                <i class="fa-solid fa-print"></i> Print / PDF Voucher
                             </button>
                             <button type="button" class="ux4g-btn ux4g-btn-primary ux4g-btn-m" id="viewCircuitStopsBtn">
-                                <i class="fa-solid fa-eye"></i> View Included Destinations
+                                <i class="fa-solid fa-compass"></i> Explore Regional Destinations
                             </button>
                         </div>
                     </div>
@@ -897,80 +1031,109 @@
             </div>
         </section>
 
-        <!-- ===================================================================
-             13. SCHEMES & ESSENTIAL TRAVEL TIPS (tourism.gov.in Government Section)
-             Rich Photography & Functional Links
-             =================================================================== -->
+        
         <section class="gov-section schemes-section" id="schemes">
             <div class="gov-container">
                 <div class="gov-section-header">
-                    <div class="section-badge-gov">
-                        <i class="fa-solid fa-shield-halved"></i> GOVERNMENT SCHEMES & TIPS
+                    <div class="section-kicker-gov">
+                        <i class="fa-solid fa-shield-halved"></i> <span>OFFICIAL TRAVELER SERVICES &amp; DIGITAL RAILS</span>
                     </div>
-                    <h2 class="gov-section-title" id="schemesTitle">Tourism Initiatives & Traveler Essentials</h2>
+                    <h2 class="gov-section-title" id="schemesTitle">Tourism Initiatives &amp; Traveler Essentials</h2>
                     <p class="gov-section-subtitle" id="schemesSubtitle">
                         Key schemes by the Ministry of Tourism, digital payments guidance, and high-speed railway connectivity.
                     </p>
                 </div>
 
-                <div class="schemes-grid">
-                    <!-- Vande Bharat Express -->
-                    <div class="ux4g-card scheme-card">
-                        <div class="scheme-photo-wrap">
-                            <img src="images/scheme-vandebharat.jpg" alt="Vande Bharat Express Train" loading="lazy">
+                <div class="schemes-utility-grid">
+                    
+                    <div class="ux4g-card scheme-utility-card">
+                        <div class="utility-card-header">
+                            <div class="utility-code-badge"><i class="fa-solid fa-train"></i> RAILWAY SERVICE &bull; IRCTC-VB-2026</div>
+                            <span class="utility-status-dot"><i class="fa-solid fa-circle-check"></i> Operational</span>
                         </div>
-                        <div class="scheme-body">
-                            <div class="scheme-icon-circle"><i class="fa-solid fa-train"></i></div>
-                            <h3>Vande Bharat Express</h3>
-                            <p>High-speed, semi-bullet trains operated by Indian Railways connecting major cultural hubs (Delhi-Varanasi, Delhi-Dehradun, Chennai-Coimbatore) with world-class amenities.</p>
-                            <a href="https://www.irctc.co.in" target="_blank" rel="noopener" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn">
-                                IRCTC Booking &nearr;
-                            </a>
+                        <div class="utility-card-img">
+                            <img src="images/scheme-vandebharat.jpg" alt="Vande Bharat Express Train">
                         </div>
-                    </div>
-
-                    <!-- UPI Payments -->
-                    <div class="ux4g-card scheme-card">
-                        <div class="scheme-photo-wrap">
-                            <img src="images/scheme-upi.png" alt="Unified Payments Interface UPI" loading="lazy">
-                        </div>
-                        <div class="scheme-body">
-                            <div class="scheme-icon-circle"><i class="fa-solid fa-qrcode"></i></div>
-                            <h3>UPI Digital Payments</h3>
-                            <p>India is the global leader in instant digital transactions. International tourists can activate UPI One World wallets at major international airports for seamless cashless transactions.</p>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn" id="upiGuideBtn">
-                                UPI Tourist Guide &nearr;
-                            </button>
+                        <div class="utility-card-body">
+                            <h3>Vande Bharat Express Network</h3>
+                            <p>Semi-high-speed express trains by Indian Railways connecting major cultural hubs (Delhi-Varanasi, Delhi-Dehradun, Chennai-Coimbatore) with 160 km/h speeds and 360° panoramic vista-dome coaches.</p>
+                            <div class="utility-spec-pills">
+                                <span>High-Speed Heritage Rail</span> &bull; <span>Vista-Dome Coaches</span>
+                            </div>
+                            <div class="utility-card-footer">
+                                <a href="https://www.irctc.co.in" target="_blank" rel="noopener" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn">
+                                    IRCTC Rail Booking &nearr;
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- e-Visa Portal -->
-                    <div class="ux4g-card scheme-card">
-                        <div class="scheme-photo-wrap">
-                            <img src="images/scheme-evisa.jpg" alt="Indian e-Tourist Visa" loading="lazy">
+                    
+                    <div class="ux4g-card scheme-utility-card">
+                        <div class="utility-card-header">
+                            <div class="utility-code-badge"><i class="fa-solid fa-qrcode"></i> DIGITAL RAIL &bull; NPCI-UPI-INTL</div>
+                            <span class="utility-status-dot"><i class="fa-solid fa-circle-check"></i> 24x7 Active</span>
                         </div>
-                        <div class="scheme-body">
-                            <div class="scheme-icon-circle"><i class="fa-solid fa-passport"></i></div>
-                            <h3>e-Tourist Visa (e-TV)</h3>
-                            <p>Fast online visa facility available for passport holders of over 160 countries. Electronic approval issued directly via the official Government portal.</p>
-                            <a href="https://indianvisaonline.gov.in" target="_blank" rel="noopener" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn">
-                                Official Visa Portal &nearr;
-                            </a>
+                        <div class="utility-card-img">
+                            <img src="images/scheme-upi.png" alt="Unified Payments Interface UPI">
+                        </div>
+                        <div class="utility-card-body">
+                            <h3>UPI One World (Tourist Wallet)</h3>
+                            <p>India leads global instant digital payments. Foreign travelers can activate UPI One World wallets at major international airports to scan and pay at millions of vendors without currency friction.</p>
+                            <div class="utility-spec-pills">
+                                <span>Airport KYC Desk</span> &bull; <span>Zero Cash Hassle</span>
+                            </div>
+                            <div class="utility-card-footer">
+                                <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn" id="upiGuideBtn">
+                                    UPI Tourist Guide &nearr;
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Best Seasons Guide -->
-                    <div class="ux4g-card scheme-card">
-                        <div class="scheme-photo-wrap">
-                            <img src="images/scheme-season.jpg" alt="Indian Tourism Best Seasons" loading="lazy">
+                    
+                    <div class="ux4g-card scheme-utility-card">
+                        <div class="utility-card-header">
+                            <div class="utility-code-badge"><i class="fa-solid fa-passport"></i> IMMIGRATION &bull; BOI-EVISA-GIGW</div>
+                            <span class="utility-status-dot"><i class="fa-solid fa-circle-check"></i> 160+ Countries</span>
                         </div>
-                        <div class="scheme-body">
-                            <div class="scheme-icon-circle"><i class="fa-solid fa-calendar-check"></i></div>
-                            <h3>Best Travel Season</h3>
-                            <p>October to March offers optimal sunny weather across plains, beaches, and deserts. April to June is ideal for Himalayan hill stations and high passes.</p>
-                            <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn" id="climateGuideBtn">
-                                Seasonal Advisory &nearr;
-                            </button>
+                        <div class="utility-card-img">
+                            <img src="images/scheme-evisa.jpg" alt="Indian e-Tourist Visa">
+                        </div>
+                        <div class="utility-card-body">
+                            <h3>Official e-Tourist Visa (e-TV)</h3>
+                            <p>Direct electronic visa clearance for eligible citizens across 160+ countries. Apply online via the official Government of India portal with rapid 72-hour electronic travel authorization.</p>
+                            <div class="utility-spec-pills">
+                                <span>72-Hr Turnaround</span> &bull; <span>Official GOV.IN Portal</span>
+                            </div>
+                            <div class="utility-card-footer">
+                                <a href="https://indianvisaonline.gov.in" target="_blank" rel="noopener" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn">
+                                    Official Visa Portal &nearr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="ux4g-card scheme-utility-card">
+                        <div class="utility-card-header">
+                            <div class="utility-code-badge"><i class="fa-solid fa-calendar-check"></i> ADVISORY &bull; IMD-MET-SEASON</div>
+                            <span class="utility-status-dot"><i class="fa-solid fa-circle-check"></i> Verified Data</span>
+                        </div>
+                        <div class="utility-card-img">
+                            <img src="images/scheme-season.jpg" alt="Indian Tourism Best Seasons">
+                        </div>
+                        <div class="utility-card-body">
+                            <h3>Seasonal Travel &amp; Climate Advisory</h3>
+                            <p>October to March provides optimal sunny climate across plains, Rajasthan deserts, and coastal beaches. April to June is peak season for Himalayan hill stations and high passes.</p>
+                            <div class="utility-spec-pills">
+                                <span>Regional Weather Windows</span> &bull; <span>Packing Guide</span>
+                            </div>
+                            <div class="utility-card-footer">
+                                <button type="button" class="ux4g-btn ux4g-btn-outline-primary ux4g-btn-s scheme-action-btn" id="climateGuideBtn">
+                                    Seasonal Advisory &nearr;
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -979,9 +1142,7 @@
 
     </main>
 
-    <!-- ===================================================================
-         14. MODAL DESTINATION GUIDE (UX4G Compliant Modal Dialog)
-         =================================================================== -->
+    
     <div class="ux4g-modal-backdrop" id="destModalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="ux4g-modal-dialog">
             <button type="button" class="modal-close-button" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
@@ -1025,7 +1186,7 @@
 
                     <h4>Must-Experience Highlights</h4>
                     <ul class="modal-highlights-list" id="modalDestExperiences">
-                        <!-- Populated dynamically by script.js -->
+                        
                     </ul>
 
                     <h4>Must-Try Regional Gastronomy</h4>
@@ -1044,9 +1205,7 @@
         </div>
     </div>
 
-    <!-- ===================================================================
-         15. FULLSCREEN IMAGE LIGHTBOX MODAL (For Photo Gallery)
-         =================================================================== -->
+    
     <div class="ux4g-modal-backdrop lightbox-backdrop" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="lightbox-dialog">
             <button type="button" class="modal-close-button lightbox-close" id="lightboxCloseBtn" aria-label="Close full preview">&times;</button>
@@ -1058,20 +1217,18 @@
         </div>
     </div>
 
-    <!-- Toast Notification -->
+    
     <div class="gov-toast-box" id="toastNotification" role="alert" aria-live="polite">
         <i class="fa-solid fa-circle-check toast-icon"></i>
         <span id="toastMessage">Tour added to your travel wishlist!</span>
     </div>
 
-    <!-- Back to Top Button -->
+    
     <button type="button" class="gov-back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-    <!-- ===================================================================
-         16. OFFICIAL GOVERNMENT OF INDIA FOOTER (Exact tourism.gov.in format)
-         =================================================================== -->
+    
     <footer class="gov-official-footer" role="contentinfo">
         <div class="gov-container footer-main-grid">
             <div class="footer-col-ministry">
@@ -1125,16 +1282,46 @@
 
         <div class="gov-footer-bottom-bar">
             <div class="gov-container bottom-flex">
-                <p>© 2026 Ministry of Tourism, Government of India. All Rights Reserved. Official Tourism Experience Portal.</p>
-                <p>Website Policies | Terms of Use | Privacy Policy | Accessibility Statement</p>
+                <div class="bottom-left-meta">
+                    <p>© 2026 Ministry of Tourism, Government of India. All Rights Reserved. Official Tourism Experience Portal.</p>
+                </div>
+                <div class="bottom-right-policies">
+                    <button type="button" class="policy-modal-trigger" data-policy="website">Website Policies</button>
+                    <span class="policy-sep">|</span>
+                    <button type="button" class="policy-modal-trigger" data-policy="terms">Terms of Use</button>
+                    <span class="policy-sep">|</span>
+                    <button type="button" class="policy-modal-trigger" data-policy="privacy">Privacy Policy</button>
+                    <span class="policy-sep">|</span>
+                    <button type="button" class="policy-modal-trigger" data-policy="accessibility">Accessibility Statement</button>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Authoritative UX4G Runtime Scripts -->
+    
+    <div class="ux4g-modal-backdrop" id="policyModalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="ux4g-modal-dialog policy-dialog">
+            <button type="button" class="modal-close-button" id="policyModalCloseBtn" aria-label="Close dialog">&times;</button>
+            <div class="policy-modal-header">
+                <div class="policy-header-badge"><i class="fa-solid fa-shield-halved"></i> GIGW OFFICIAL MANDATE</div>
+                <h3 id="policyModalTitle">Website Policies</h3>
+                <p id="policyModalSubtitle">Ministry of Tourism, Government of India</p>
+            </div>
+            <div class="policy-modal-body" id="policyModalContent">
+                
+            </div>
+            <div class="modal-footer-bar">
+                <button type="button" class="ux4g-btn ux4g-btn-primary ux4g-btn-s" id="policyModalAcknowledgeBtn">
+                    <i class="fa-solid fa-check"></i> Acknowledge &amp; Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
     <script src="https://cdn.ux4g.gov.in/UX4G@3.3.2/ux4g.js"></script>
     <script src="https://cdn.ux4g.gov.in/UX4G@3.3.2/ux4g-custom.js"></script>
-    <!-- Application Logic -->
-    <script src="script.js"></script>
+    
+    <script src="script.js?v=prod2026"></script>
 </body>
 </html>

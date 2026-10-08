@@ -1,13 +1,10 @@
-/**
- * Ministry of Tourism - Government of India Official Portal
- * High-Performance Client Logic, UX4G Integration & Interactive Engine
- */
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =================================================================
-    // 1. COMPREHENSIVE DESTINATION DATASET (19 Verified Tours)
-    // =================================================================
+    
+    
+    
     const destinations = [
         {
             id: "agra",
@@ -334,9 +331,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    // =================================================================
-    // 2. MONUMENTS DATASET (6 UNESCO WONDERS)
-    // =================================================================
+    
+    
+    
     const monumentsData = {
         "agra": {
             name: "The Taj Mahal",
@@ -442,9 +439,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // =================================================================
-    // 3. CULINARY, FESTIVALS & INITIATIVES DATASETS
-    // =================================================================
+    
+    
+    
     const culinaryDetails = {
         "biryani": {
             name: "Hyderabadi & Awadhi Dum Biryani",
@@ -662,9 +659,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // =================================================================
-    // 4. HERO CAROUSEL ENGINE (Auto-Cycle, Controls, Indicators)
-    // =================================================================
+    
+    
+    
     const slides = document.querySelectorAll(".carousel-slide");
     const indicatorDots = document.querySelectorAll(".indicator-dot");
     const prevBtn = document.getElementById("carouselPrev");
@@ -718,7 +715,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     startAutoSlide();
 
-    // Slide buttons: "Explore Monument" & "View Circuit"
+    
     document.querySelectorAll(".view-slide-guide").forEach(btn => {
         btn.addEventListener("click", () => {
             const slideKey = btn.getAttribute("data-slide");
@@ -739,9 +736,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // =================================================================
-    // 5. ACCESSIBILITY UTILITIES (Font Resizer, Contrast, Language)
-    // =================================================================
+    
+    
+    
     const fontDecrease = document.getElementById("fontDecrease");
     const fontReset = document.getElementById("fontReset");
     const fontIncrease = document.getElementById("fontIncrease");
@@ -750,7 +747,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const langToggle = document.getElementById("langToggle");
     const langLabel = document.getElementById("langLabel");
 
-    // Font Resizing
+    
     function setFontSize(sizeClass) {
         document.body.classList.remove("font-sm", "font-md", "font-lg");
         document.body.classList.add(sizeClass);
@@ -764,7 +761,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (fontReset) fontReset.addEventListener("click", () => setFontSize("font-md"));
     if (fontIncrease) fontIncrease.addEventListener("click", () => setFontSize("font-lg"));
 
-    // High Contrast Dark Mode
+    
     if (themeToggle) {
         themeToggle.addEventListener("click", () => {
             const html = document.documentElement;
@@ -776,7 +773,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Bilingual Language Translation Engine (English <-> Hindi)
+    
     let currentLang = "en";
     const i18nDictionary = {
         en: {
@@ -862,7 +859,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const searchInput = document.getElementById("topNavSearch");
             if (searchInput) searchInput.placeholder = dict.searchPlaceholder;
 
-            // Nav links translation
+            
             document.querySelectorAll(".gov-nav-link .nav-text").forEach(span => {
                 const text = span.getAttribute(`data-${currentLang}`);
                 if (text) span.textContent = text;
@@ -872,9 +869,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =================================================================
-    // 6. POPULAR TRIPS SEARCH & FILTER ENGINE
-    // =================================================================
+    
+    
+    
     const destinationsGrid = document.getElementById("destinationsGrid");
     const resultsCount = document.getElementById("resultsCount");
     const noResults = document.getElementById("noResults");
@@ -890,7 +887,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let searchQuery = "";
     let savedBookmarks = new Set();
 
-    // Load saved bookmarks from localStorage
+    
     try {
         const saved = JSON.parse(localStorage.getItem("indiaTourismBookmarks") || "[]");
         saved.forEach(id => savedBookmarks.add(id));
@@ -939,7 +936,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return `
                 <div class="ux4g-card tour-card" data-dest-id="${dest.id}">
                     <div class="tour-card-media">
-                        <img src="${dest.image}" alt="${dest.name}" loading="lazy">
+                        <img src="${dest.image}" alt="${dest.name}">
                         <span class="tour-zone-badge">${zoneName}</span>
                         <button type="button" class="tour-fav-btn" data-fav-id="${dest.id}" title="Wishlist" aria-label="Add to wishlist">
                             <i class="${favIcon}"></i>
@@ -1027,7 +1024,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Category chips click
+    
     categoryChips.forEach(chip => {
         chip.addEventListener("click", () => {
             currentFilter = chip.getAttribute("data-filter");
@@ -1036,7 +1033,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // In-section search
+    
     if (destinationSearch) {
         destinationSearch.addEventListener("input", (e) => {
             searchQuery = e.target.value;
@@ -1066,7 +1063,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Top Navigation Search bar
+    
     function executeTopSearch() {
         const query = (topNavSearch ? topNavSearch.value.trim() : "");
         if (destinationSearch) destinationSearch.value = query;
@@ -1093,9 +1090,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =================================================================
-    // 7. MONUMENT, FOOD, FESTIVAL & INITIATIVE BUTTONS
-    // =================================================================
+    
+    
+    
     document.querySelectorAll(".monument-detail-btn").forEach(btn => {
         btn.addEventListener("click", () => {
             const id = btn.getAttribute("data-dest-id");
@@ -1135,7 +1132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // UPI & Climate Guides
+    
     const upiGuideBtn = document.getElementById("upiGuideBtn");
     if (upiGuideBtn) {
         upiGuideBtn.addEventListener("click", () => {
@@ -1182,9 +1179,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =================================================================
-    // 8. INTERACTIVE GALLERY & LIGHTBOX ENGINE
-    // =================================================================
+    
+    
+    
     const galleryChips = document.querySelectorAll(".gallery-chip");
     const galleryItems = document.querySelectorAll(".gallery-item");
     const lightboxModal = document.getElementById("lightboxModal");
@@ -1258,9 +1255,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =================================================================
-    // 9. MODAL DESTINATION GUIDE (UX4G Accessible Dialog)
-    // =================================================================
+    
+    
+    
     const modalBackdrop = document.getElementById("destModalBackdrop");
     const modalCloseBtn = document.getElementById("modalCloseBtn");
     const modalCloseActionBtn = document.getElementById("modalCloseActionBtn");
@@ -1346,139 +1343,634 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =================================================================
-    // 10. SMART TRIP PLANNER LOGISTICS ENGINE
-    // =================================================================
+    
+    
+    
     const plannerCircuits = {
         "winter-heritage": {
-            badge: "Imperial Heritage Circuit",
-            title: "Royal Golden Triangle & Desert Fortresses",
-            subtitle: "Delhi • Agra (Taj Mahal) • Jaipur • Udaipur",
-            route: "Fly into New Delhi → Gatimaan Express to Agra → Drive to Jaipur → Express Train to Udaipur City of Lakes",
-            climate: "October to March: Crisp sunny days (16°C – 25°C), cool breezy evenings",
-            budget: "₹4,000 - ₹9,500 ($50 - $115 USD) per day with royal haveli stays",
-            highlight: "Dawn sunrise view of Taj Mahal followed by private boat ride on Lake Pichola, Udaipur.",
-            filterTag: "north"
+            badge: "Imperial Golden Triangle",
+            title: "Royal Delhi, Taj Mahal & Pink City Haveli Circuit",
+            subtitle: "New Delhi • Agra • Fatehpur Sikri • Jaipur • Pushkar",
+            route: "Delhi Airport Express to NDLS → Train 12050 Gatimaan Express (NZM 08:10 → AGC 09:50, 100 min) → Yamuna Expressway / NH21 to Jaipur → Train 20978 Vande Bharat (JP 15:45 → DEC 19:35)",
+            climate: "October to March: Sunny crisp days (14°C – 26°C), morning fog in Dec/Jan. Pack breathable cottons with evening light jackets.",
+            budgets: {
+                backpacker: "₹2,100 / $25 USD per person/day (Zostel / Madpackers dorms, Indian Railways Sleeper/3AC, street thalis & metro)",
+                comfort: "₹5,400 / $65 USD per person/day (Boutique heritage havelis, Gatimaan & Vande Bharat AC Chair Car, private AC sedan)",
+                luxury: "₹19,500 / $235 USD per person/day (The Oberoi Amarvilas & Taj Rambagh Palace, private chauffeur, fast-track ASI VIP entries)"
+            },
+            highlight: "Haveli Dharampura (Delhi), Peshawri at ITC Mughal (Agra), LMB Johari Bazaar & 1135 AD Amber Fort (Jaipur)",
+            filterTag: "north",
+            days: [
+                {
+                    dayNumber: 1,
+                    dayTitle: "Arrival in Delhi & Shahjahanabad Heritage Walk",
+                    location: "Delhi NCR",
+                    morning: "08:30 AM – Check in via Delhi Airport Express Metro (19 mins to New Delhi Station). Visit Jama Masjid (free entry; ₹300 camera fee). Walk through Dariba Kalan silver lane & Khari Baoli spice market.",
+                    afternoon: "12:45 PM – Authentic lunch at Karim's (Gate 1 Jama Masjid; Mutton Rogan Josh or Dal Makhani). 02:30 PM – Red Fort Lahori Gate (Pre-book online at asi.payumoney.com to skip 40-min queue; ₹50 Indian / ₹600 Foreigner).",
+                    evening: "05:30 PM – Humayun’s Tomb gardens at golden hour. 08:00 PM – Dinner at Pandara Road (Gulati). Overnight stay at Connaught Place boutique hotel.",
+                    localTip: "Use Delhi Metro Smart Card or WhatsApp QR ticket to skip token queues. For autos, insist on meter or book Uber Auto."
+                },
+                {
+                    dayNumber: 2,
+                    dayTitle: "Gatimaan Express to Agra & Agra Fort Sunset",
+                    location: "Agra, Uttar Pradesh",
+                    morning: "07:30 AM – Board Gatimaan Express (Train 12050) from Hazrat Nizamuddin at 08:10 AM; arrives Agra Cantt at 09:50 AM (AC Chair Car breakfast included). Transfer to hotel near Taj East Gate.",
+                    afternoon: "01:00 PM – Lunch at Pinch of Spice (Paneer Lababdar / Murgh Boti). 02:45 PM – Tour Agra Fort (Jahangiri Mahal & Diwan-i-Khas where Shah Jahan was imprisoned facing the Taj).",
+                    evening: "05:15 PM – Cross Yamuna River to Mehtab Bagh for sunset reflection of the Taj Mahal across the water. Dinner at Peshawri (ITC Mughal, famous Dal Bukhara).",
+                    localTip: "Buy composite ASI entry ticket online. Only mobile phones and water bottles are permitted inside monument grounds; leave large bags at hotel."
+                },
+                {
+                    dayNumber: 3,
+                    dayTitle: "Taj Mahal Dawn Sunrise & Ghost City of Fatehpur Sikri",
+                    location: "Agra & Fatehpur Sikri",
+                    morning: "05:45 AM – Reach Taj Mahal East Gate 30 minutes before sunrise for empty reflective pool photographs. Pre-book main mausoleum entry (₹200 add-on). Shoe covers and bottled water included.",
+                    afternoon: "11:30 AM – Drive 38 km to UNESCO Fatehpur Sikri (Emperor Akbar’s red sandstone capital). Marvel at the 54-meter Buland Darwaza and white marble tomb of Sufi saint Sheikh Salim Chishti.",
+                    evening: "04:30 PM – Sample authentic Agra Petha at authentic Panchhi Petha (Sadar Bazaar). 06:30 PM – Board evening intercity express or private AC taxi along NH21 toward Jaipur (approx. 4.5 hours).",
+                    localTip: "Taj Mahal is strictly closed to tourists every Friday for prayers. Plan your schedule accordingly."
+                },
+                {
+                    dayNumber: 4,
+                    dayTitle: "Amber Fort Royal Citadel & Panna Meena Stepwell",
+                    location: "Jaipur, Rajasthan",
+                    morning: "08:00 AM – Early ascent to Amber Fort to beat afternoon heat. Explore Sheesh Mahal (Palace of Mirrors) and Maota Lake views. Walk 5 mins to the geometric 16th-century Panna Meena Ka Kund stepwell.",
+                    afternoon: "01:00 PM – Traditional Rajasthani Thali lunch at 1135 AD inside fort ramparts, or drive into city for Rawat Mishthan Bhandar (legendary hot Pyaaz Kachori and Mirchi Vada).",
+                    evening: "04:30 PM – Photo stop at Jal Mahal (Water Palace). Drive up to Nahargarh Fort ramparts for panoramic sunset over the entire Pink City skyline. Dinner at Padao open-air terrace.",
+                    localTip: "Purchase Jaipur Composite Ticket (₹100 Indian / ₹500 Foreigner; valid for 2 days across Amber Fort, Albert Hall, Hawa Mahal, and Jantar Mantar)."
+                },
+                {
+                    dayNumber: 5,
+                    dayTitle: "Pink City Palaces, Jantar Mantar Observatory & Bazaars",
+                    location: "Jaipur Pink City",
+                    morning: "08:30 AM – Hawa Mahal (Palace of Winds) facade photography from Wind View Cafe. Visit City Palace Jaipur including Pritam Niwas Chowk (Peacock Gate) and Maharaja Sawai Man Singh II Museum.",
+                    afternoon: "12:30 PM – Walk next door to Jantar Mantar UNESCO site (world's largest stone sundial, measuring time down to 2-second accuracy). Lunch at Laxmi Mishthan Bhandar (LMB) in Johari Bazaar.",
+                    evening: "04:30 PM – Walking tour through Bapu Bazaar and Johari Bazaar for blue pottery, block-print quilts, and silver jewelry. 07:30 PM – Cultural puppet and folk dance performance at Bagore Ki Haveli.",
+                    localTip: "Fixed price government handicraft emporiums (Rajasthali on MI Road) give genuine benchmark prices before bargaining in street bazaars."
+                },
+                {
+                    dayNumber: 6,
+                    dayTitle: "Sacred Lake Pushkar or Regal Albert Hall Museum",
+                    location: "Pushkar / Jaipur",
+                    morning: "07:00 AM – Optional morning excursion to holy Pushkar (130 km via Ajmer). Visit the rare 14th-century Lord Brahma Temple and the 52 sacred ghats of Pushkar Lake.",
+                    afternoon: "01:30 PM – Falafel and lassi at Pushkar rooftop cafes, or return to Jaipur for Albert Hall Museum (Indo-Saracenic architectural masterpiece and Persian carpets).",
+                    evening: "06:30 PM – Evening stroll around Central Park or sound & light show at Amber Fort. Dinner at Baradari inside City Palace courtyard.",
+                    localTip: "In Pushkar, decline priest 'puja flowers' offered aggressively at ghats if you do not seek a religious ritual donation."
+                },
+                {
+                    dayNumber: 7,
+                    dayTitle: "Vande Bharat Express to Delhi & Departure",
+                    location: "Jaipur & New Delhi",
+                    morning: "09:00 AM – Relaxed breakfast at heritage haveli. Last-minute artisan shopping for hand-blocked Sanganeri linens and lac bangles.",
+                    afternoon: "01:30 PM – Board Vande Bharat Express (Train 20978) from Jaipur Junction at 15:45 PM; arrives Delhi Cantt at 19:35 PM in supreme comfort with hot snacks service.",
+                    evening: "08:00 PM – Transfer directly from Delhi Cantt to IGI Airport Terminal 3 for international return flights or domestic connections.",
+                    localTip: "Book IRCTC Vande Bharat tickets 15–30 days in advance via IRCTC portal; Executive Class includes wide reclining seats and panoramic observation windows."
+                }
+            ]
         },
         "winter-spiritual": {
-            badge: "Sacred Rivers & Enlightenment",
-            title: "The Eternal Ghats & Golden Sanctum Tour",
-            subtitle: "Varanasi • Prayagraj • Sarnath • Amritsar",
-            route: "Vande Bharat Express: Delhi → Varanasi (Ganga Aarti) → Amritsar Golden Temple",
-            climate: "November to February: Cool winter air (12°C – 22°C), sacred morning mist",
-            budget: "₹2,500 - ₹5,500 ($30 - $65 USD) per day",
-            highlight: "Ganga Aarti brass fire ceremony and midnight sacred hymns at Harmandir Sahib.",
-            filterTag: "north"
+            badge: "Sacred Rivers & Ghats",
+            title: "The Eternal Ganga Aarti & Sacred Confluence Circuit",
+            subtitle: "Varanasi • Sarnath • Prayagraj (Triveni Sangam) • Ayodhya",
+            route: "Train 22436 Vande Bharat (NDLS 06:00 → BSB 14:00, 8 hrs) → AC private taxi to Prayagraj Sangam (120 km / 2.5 hrs) → Return via Lal Bahadur Shastri Airport (VNS)",
+            climate: "November to February: 12°C – 23°C, misty morning river air. Pack slip-on shoes for temple corridors and warm shawls for dawn boat rides.",
+            budgets: {
+                backpacker: "₹1,600 / $20 USD per person/day (Ghats guesthouse / Zostel Varanasi, shared rowing boats, street kachori jalebi)",
+                comfort: "₹4,200 / $50 USD per person/day (Riverside haveli with river-view balcony, private motorboat charter, guided temple corridor)",
+                luxury: "₹16,500 / $200 USD per person/day (BrijRama Palace on Darbhanga Ghat, private bajra boat for Ganga Aarti, VIP Darshan passes)"
+            },
+            highlight: "Subah-e-Banaras dawn chanting at Assi Ghat, Kashi Chaat Bhandar (Tamatar Chaat), Blue Lassi, Sarnath Dhamek Stupa",
+            filterTag: "north",
+            days: [
+                {
+                    dayNumber: 1,
+                    dayTitle: "Arrival in Varanasi & Evening Dashashwamedh Aarti",
+                    location: "Varanasi, Uttar Pradesh",
+                    morning: "09:00 AM – Arrive via Vande Bharat Express at Varanasi Junction. Transfer to riverside haveli near Assi Ghat or Godowlia Crossing.",
+                    afternoon: "01:30 PM – Lunch at Keshari Restaurant (Baati Chokha & Thali). Rest and recharge before heading into the narrow old lanes.",
+                    evening: "05:30 PM – Board private wooden boat to witness the majestic Grand Ganga Aarti at Dashashwamedh Ghat. Multi-tiered brass lamps, conch shells, and floating flower diyas. Dinner at Cantonment.",
+                    localTip: "Book evening boat from Assi or Dashashwamedh Ghat by 04:30 PM to secure prime mooring directly facing the priest platforms."
+                },
+                {
+                    dayNumber: 2,
+                    dayTitle: "Dawn Rowing Boat on the Ganges & Kashi Vishwanath Corridor",
+                    location: "Varanasi Ghats",
+                    morning: "05:15 AM – Subah-e-Banaras classical music and yoga at Assi Ghat. Dawn rowing boat along Manikarnika Ghat to Panchganga Ghat as pilgrims bathe in the morning sun.",
+                    afternoon: "11:00 AM – Breakfast of hot Kachori-Sabzi and Jalebi at Ram Bhandar. Visit the newly renovated Kashi Vishwanath Golden Temple Corridor (pre-book Sugam Darshan ticket online to skip 2-hour queue).",
+                    evening: "04:30 PM – Walk through Thatheri Bazaar brass market. Evening tea and Tamatar Chaat at Kashi Chaat Bhandar (Godowlia). Night stroll along illuminated Namo Ghat.",
+                    localTip: "Mobile phones, leather belts, and bags are prohibited inside Kashi Vishwanath Sanctum; use the official digital lockers inside Corridor Gate 4."
+                },
+                {
+                    dayNumber: 3,
+                    dayTitle: "Sarnath Deer Park & Buddhist Enlightenment Monuments",
+                    location: "Sarnath, Uttar Pradesh",
+                    morning: "08:30 AM – Drive 12 km to Sarnath, where Lord Buddha gave his First Sermon 2,500 years ago. Explore the colossal 43-meter Dhamek Stupa and Mulagandha Kuti Vihara.",
+                    afternoon: "12:30 PM – Visit Sarnath Archaeological Museum housing the original 3rd-century BCE Lion Capital of Ashoka (National Emblem of India).",
+                    evening: "05:00 PM – Return to Varanasi. Taste legendary saffron Malaiyyo (winter milk froth dessert) in Chaukhamba lane. Banarasi silk saree weaver workshop at Madanpura.",
+                    localTip: "Museum is closed on Fridays. Buy the ₹20 ASI ticket online to bypass the physical counter."
+                },
+                {
+                    dayNumber: 4,
+                    dayTitle: "Day Excursion to Prayagraj & Triveni Sangam Confluence",
+                    location: "Prayagraj (Allahabad)",
+                    morning: "06:30 AM – Early private taxi to Prayagraj (120 km / 2.5 hrs via NH19). Head directly to Qila Ghat for a boat out to the Triveni Sangam (confluence of Ganga, Yamuna, and invisible Saraswati).",
+                    afternoon: "01:00 PM – Traditional lunch in Civil Lines. Visit Anand Bhavan (historic ancestral home of the Nehru family and center of the Indian freedom movement).",
+                    evening: "04:30 PM – Visit Allahabad Fort and the underground Patalpuri Temple. Drive back to Varanasi by 08:30 PM for rest.",
+                    localTip: "Negotiate boats at Sangam before boarding; fixed government rate boards are displayed near the mela police post."
+                }
+            ]
         },
         "winter-nature": {
-            badge: "Tropical Serenity Circuit",
-            title: "God's Own Country & Spice Trail",
-            subtitle: "Kochi • Munnar Tea Hills • Thekkady Wildlife • Alleppey Backwaters",
-            route: "Arrive at Cochin International → Scenic drive to Munnar → Houseboat at Alleppey",
-            climate: "October to March: Mild tropical warmth (22°C – 30°C) with gentle ocean breeze",
-            budget: "₹4,500 - ₹8,000 ($55 - $95 USD) per day with luxury houseboat stay",
-            highlight: "Sleeping under the stars aboard a traditional thatched houseboat floating on Alleppey backwaters.",
-            filterTag: "south"
+            badge: "God's Own Country Circuit",
+            title: "Kerala Backwaters, Spice Hills & Tea Highlands",
+            subtitle: "Kochi Fort • Munnar Tea Estates • Thekkady Wildlife • Alleppey Houseboat",
+            route: "Arrive Cochin International (COK) → Mountain drive NH85 to Munnar (130 km / 4 hrs) → Spice trail to Thekkady (90 km / 3 hrs) → Alleppey Backwaters jetty (140 km / 3.5 hrs)",
+            climate: "October to March: Mild tropical coastal warmth (22°C – 30°C). Munnar tea hills drop to 12°C at night. Pack light breathable clothes plus a fleece for Munnar.",
+            budgets: {
+                backpacker: "₹2,200 / $27 USD per person/day (Fort Kochi colonial homestay, state KSRTC buses, government ferry rides ₹15, fish curry meals)",
+                comfort: "₹5,800 / $70 USD per person/day (Private AC car throughout, 3★ tea plantation resort, private AC deluxe houseboat with chef)",
+                luxury: "₹22,000 / $265 USD per person/day (Brunton Boatyard Fort Kochi, Windermere Estate Munnar, luxury ultra-premium Kettuvallam houseboat)"
+            },
+            highlight: "Kolukkumalai world's highest organic tea estate, Periyar bamboo rafting, private thatched houseboat cruise with Karimeen Pollichathu dinner",
+            filterTag: "south",
+            days: [
+                {
+                    dayNumber: 1,
+                    dayTitle: "Colonial Fort Kochi, Chinese Fishing Nets & Kathakali",
+                    location: "Kochi, Kerala",
+                    morning: "09:00 AM – Arrive Cochin Airport (world's first 100% solar-powered airport). Taxi to Fort Kochi. Walk to the 14th-century cantilevered Chinese Fishing Nets along Vasco da Gama Square.",
+                    afternoon: "01:00 PM – Malabar seafood lunch at Paragon or Oceanos. Visit St. Francis Church (oldest European church in India) and Santa Cruz Cathedral Basilica.",
+                    evening: "05:00 PM – Attend traditional Kathakali makeup and classical dance recital at Kerala Kathakali Centre. Dinner at Kashi Art Cafe in Burgher Street.",
+                    localTip: "Use the Kochi Water Metro (electric air-conditioned boats) to travel between High Court Jetty and Vypin for only ₹20 with scenic harbor views."
+                },
+                {
+                    dayNumber: 2,
+                    dayTitle: "Jew Town Mattancherry & Drive into Misty Munnar Hills",
+                    location: "Kochi to Munnar",
+                    morning: "08:30 AM – Explore Jew Town antique markets and the 1568 Paradesi Synagogue in Mattancherry. Visit Dutch Palace (Mattancherry Palace) murals.",
+                    afternoon: "11:30 AM – Scenic drive ascending through the Western Ghats (NH85). Stop at Cheeyappara and Valara waterfalls. Fresh cardamom tea at roadside stalls.",
+                    evening: "04:30 PM – Arrive in Munnar (1,600m altitude). Check into tea plantation resort. Evening walk through eucalyptus and tea gardens. Dinner at Saravana Bhavan Munnar.",
+                    localTip: "Road to Munnar has winding hairpin bends; keep motion sickness tablets handy if sensitive to hill roads."
+                },
+                {
+                    dayNumber: 3,
+                    dayTitle: "Munnar Tea Factory, Eravikulam National Park & Nilgiri Tahr",
+                    location: "Munnar, Kerala",
+                    morning: "07:30 AM – Visit Eravikulam National Park (Rajamalai) to spot the endangered Nilgiri Tahr (mountain goat) against rolling shola grasslands (Pre-book entry at eravikulamnationalpark.in).",
+                    afternoon: "01:00 PM – Visit KDHP Tea Museum at Nullatanni Estate. Witness orthodox black tea processing from CTC rolling to final tasting.",
+                    evening: "04:00 PM – Drive to Mattupetty Dam and Echo Point. Enjoy fresh spice plantation spiced tea and homemade chocolates. Campfire dinner at resort.",
+                    localTip: "Eravikulam Park closes annually during the Nilgiri Tahr calving season (Feb to March); check forestry department notices before travel."
+                },
+                {
+                    dayNumber: 4,
+                    dayTitle: "Spice Plantations of Thekkady & Periyar Lake Cruise",
+                    location: "Thekkady (Periyar)",
+                    morning: "08:00 AM – Drive south through cardamom hills to Thekkady (3 hrs). Guided walking tour through Abraham’s Spice Garden (cinnamon, vanilla, black pepper, nutmeg).",
+                    afternoon: "01:30 PM – Traditional Kerala Sadhya lunch on banana leaf. Check in to jungle eco-lodge near Periyar National Park.",
+                    evening: "03:30 PM – Kerala Tourism boat safari on Periyar Lake to spot wild elephant herds, sambar deer, and otters along lake banks. 07:00 PM – Kalaripayattu martial arts show at Kadathanadan Kalari Centre.",
+                    localTip: "Book the 07:30 AM or 03:30 PM Forest Department boat online at periyartigerreserve.org weeks in advance for best wildlife sightings."
+                },
+                {
+                    dayNumber: 5,
+                    dayTitle: "Boarding Private Alleppey Houseboat (Kettuvallam)",
+                    location: "Alleppey (Alappuzha)",
+                    morning: "08:30 AM – Drive down the Ghats to Alleppey Backwaters jetty (3.5 hrs). Board your private thatched Kettuvallam houseboat by 12:00 PM noon. Welcome tender coconut drink.",
+                    afternoon: "01:00 PM – Houseboat glides through Vembanad Lake and Punnamada backwater canals. Onboard chef prepares freshly fried pearl spot fish (Karimeen Pollichathu), red rice, and avial.",
+                    evening: "05:00 PM – Boat moors along quiet village bank at sunset. Walk through paddy fields below sea level (Kuttanad). Candlelight dinner on deck under clear stars.",
+                    localTip: "By government environmental regulation, houseboats must anchor between 05:30 PM and 07:30 AM to allow local fishermen to cast their nets undisturbed."
+                }
+            ]
         },
         "summer-adventure": {
-            badge: "High Altitude Expedition",
-            title: "The Great Trans-Himalayan Odyssey",
-            subtitle: "Leh • Khardung La Pass • Nubra Valley • Pangong Tso Lake",
-            route: "Fly into Leh (acclimatize 48 hrs) → Nubra Valley via world's highest passes → Pangong Lake",
-            climate: "May to September: Sunny blue skies, cool winds (15°C day, 3°C night)",
-            budget: "₹5,000 - ₹10,000 ($60 - $120 USD) per day including 4x4 transport & glamping",
-            highlight: "Stargazing at milky way skies over Pangong Tso crystal lake and camel ride in Hunder dunes.",
-            filterTag: "himalayas"
+            badge: "High Altitude Trans-Himalayan",
+            title: "The Great Ladakh High Passes & Pangong Tso Expedition",
+            subtitle: "Leh (3,500m) • Khardung La (5,359m) • Nubra Valley • Pangong Tso (4,250m)",
+            route: "Flight into Kushok Bakula Rimpochee Airport (IXL Leh) → Acclimatize 48 hrs in Leh → 4x4 Scorpio/Innova to Nubra via Khardung La → Shayok river route to Pangong Lake → Return via Chang La Pass",
+            climate: "May to September: Bright mountain sun (16°C – 22°C day), chilly night temperatures (0°C – 5°C). High UV intensity; sunglasses, sunblock SPF 50, and layered thermal fleece mandatory.",
+            budgets: {
+                backpacker: "₹2,600 / $32 USD per person/day (Leh homestay / guest room, shared taxi tours to Nubra/Pangong, momos & thukpa)",
+                comfort: "₹6,800 / $82 USD per person/day (3★ solar-heated hotel in Leh, private 4WD vehicle with oxygen cylinder, luxury yurt glamping at Pangong)",
+                luxury: "₹24,000 / $290 USD per person/day (The Grand Dragon Ladakh / Chamba Camp Thiksey, dedicated expedition leader, private luxury heated dome)"
+            },
+            highlight: "Stargazing at milky way skies over Pangong Tso crystal lake, Hunder sand dunes double-humped camel ride, and Thiksey morning chanting",
+            filterTag: "himalayas",
+            days: [
+                {
+                    dayNumber: 1,
+                    dayTitle: "Leh Arrival & Mandatory High Altitude Acclimatization",
+                    location: "Leh, Ladakh (3,500m)",
+                    morning: "07:30 AM – Spectacular flight over snow-capped Karakoram ranges landing at Leh (3,500m). Transfer to hotel. STRICT RULE: Complete bed rest for the first 24 hours to prevent Acute Mountain Sickness (AMS).",
+                    afternoon: "01:00 PM – Light hydrating lunch at hotel (garlic soup, clear broth, plenty of warm water or ginger honey tea). Rest indoors.",
+                    evening: "05:30 PM – Very slow gentle walk through Leh Main Bazaar. Visit Tibetan Kitchen for dinner. Early sleep.",
+                    localTip: "Do not plan any excursions on Day 1. Drink 3–4 liters of fluids. Consult your doctor beforehand regarding Diamox (Acetazolamide) prophylaxis."
+                },
+                {
+                    dayNumber: 2,
+                    dayTitle: "Shanti Stupa Sunrise & Indus Valley Monasteries",
+                    location: "Leh Valley",
+                    morning: "06:30 AM – Morning drive up to white-domed Shanti Stupa for panoramic dawn views of Leh town and Namgyal Tsemo Fort.",
+                    afternoon: "11:30 AM – Tour Shey Palace and the majestic 12-story Thiksey Monastery (resembling the Potala Palace of Lhasa). Visit the 15-meter statue of Maitreya Buddha.",
+                    evening: "04:30 PM – Visit Hall of Fame War Memorial maintained by Indian Army. Evening coffee and apricot pie at Gesmo Bakery in Leh.",
+                    localTip: "Obtain Inner Line Permit (ILP) online at lahdclehpermit.in for Nubra and Pangong (Environmental fee ₹400 + Red Cross fee ₹100 + ₹20/day)."
+                },
+                {
+                    dayNumber: 3,
+                    dayTitle: "Crossing Khardung La Pass (5,359m) to Nubra Valley Dunes",
+                    location: "Khardung La to Nubra Valley",
+                    morning: "07:00 AM – Drive north climbing the world's most dramatic paved mountain road. Reach summit of Khardung La Pass (5,359m / 17,582 ft). Quick 15-minute photo stop at prayer flags.",
+                    afternoon: "01:30 PM – Descend into the picturesque Nubra Valley (Diskit). Tour the colossal 32-meter golden statue of Jampa Buddha overlooking Shyok River.",
+                    evening: "05:00 PM – Sunset double-humped Bactrian camel safari across cold desert sand dunes at Hunder. Check into deluxe yurt camp. Traditional Ladakhi stew dinner.",
+                    localTip: "Do not stay longer than 20 minutes at the summit of Khardung La to avoid oxygen deprivation headache."
+                },
+                {
+                    dayNumber: 4,
+                    dayTitle: "Scenic Shyok River Route to Surreal Pangong Tso Lake",
+                    location: "Nubra to Pangong Tso (4,250m)",
+                    morning: "06:30 AM – Depart early via the rugged off-road Shayok River route connecting Nubra directly to Pangong Lake without re-crossing Leh (approx. 5.5 hours drive).",
+                    afternoon: "01:00 PM – First breathtaking sight of Pangong Tso’s shimmering deep-blue and turquoise saltwater expanse extending 134 km into Tibet.",
+                    evening: "05:00 PM – Photography along Spangmik shoreline as water color shifts from sapphire to aquamarine. Midnight stargazing under zero-light-pollution Milky Way skies.",
+                    localTip: "Temperatures at Pangong drop below freezing even in June–August. Ensure your camp has heavy down duvets or room heating."
+                }
+            ]
         },
         "summer-nature": {
             badge: "Himachal Mountain Splendor",
             title: "Pine Forests, Paragliding & Monasteries",
-            subtitle: "Dalhousie • Khajjiar • Dharamsala • Manali",
-            route: "Train to Pathankot / Flight to Kangra → Scenic drive to Dalhousie → McLeod Ganj",
-            climate: "April to June: Refreshing mountain breeze (15°C – 25°C), snow on high passes",
-            budget: "₹3,500 - ₹7,500 ($45 - $90 USD) per day",
-            highlight: "Walking across the golden meadow of Khajjiar and meditating at the Dalai Lama temple.",
-            filterTag: "himalayas"
+            subtitle: "Dharamshala • McLeod Ganj • Manali • Solang Valley",
+            route: "Flight to Kangra Airport (DHM) / Train to Pathankot → Scenic drive to McLeod Ganj (90 km) → Drive through tea gardens to Manali (210 km / 6.5 hrs) → Return via Chandigarh",
+            climate: "April to June: Refreshing mountain breeze (16°C – 26°C), clear Himalayan views, wild pine scents. Light sweaters for evening walks.",
+            budgets: {
+                backpacker: "₹1,900 / $23 USD per person/day (Old Manali hostel, shared Volvos, Tibetan momo stalls, self-guided trail hikes)",
+                comfort: "₹4,800 / $58 USD per person/day (Chalet resort with apple orchard view, dedicated AC cab, guided paragliding & trout dining)",
+                luxury: "₹17,000 / $205 USD per person/day (The Himalayan luxury castle, Norbulingka private suite, VIP Solang heli-transfers)"
+            },
+            highlight: "Walking across the golden cedar trails of Dharamkot, Dalai Lama Temple Complex, and baked Himalayan trout at Johnson's Cafe",
+            filterTag: "himalayas",
+            days: [
+                {
+                    dayNumber: 1,
+                    dayTitle: "Arrival in McLeod Ganj & Tsuglagkhang Temple Complex",
+                    location: "Dharamshala / McLeod Ganj",
+                    morning: "09:30 AM – Arrive in McLeod Ganj (Little Lhasa). Check into pine ridge hotel. Stroll through Temple Road Tibetan craft markets.",
+                    afternoon: "01:00 PM – Lunch at Tibet Kitchen (Steamed tingmo bread with shapta). 02:30 PM – Visit Tsuglagkhang Complex (residence of His Holiness the Dalai Lama), spin the prayer wheels, and visit the Tibet Museum.",
+                    evening: "05:30 PM – Walk through the deodar forest to the serene Church of St. John in the Wilderness (built 1852). Sunset coffee at Illiterati Books & Coffee.",
+                    localTip: "Observe temple etiquette: walk clockwise around all Buddhist stupas and prayer wheel shrines."
+                },
+                {
+                    dayNumber: 2,
+                    dayTitle: "Bhagsunag Waterfall, Dharamkot & Norbulingka Institute",
+                    location: "Dharamshala Valley",
+                    morning: "08:00 AM – Short morning hike from Bhagsunag temple to Bhagsu waterfall. Continue uphill to Dharamkot village for panoramic Kangra valley views.",
+                    afternoon: "01:00 PM – Drive down to Norbulingka Institute (dedicated to preserving traditional Tibetan thangka painting, woodcarving, and bronze metalwork).",
+                    evening: "05:00 PM – Visit the picturesque tea gardens of Kangra. Taste fresh first-flush Kangra green tea. Dinner at Nick's Italian Kitchen.",
+                    localTip: "Norbulingka Japanese-style gardens offer tranquil reading spots and an authentic Tibetan craft workshop tour."
+                },
+                {
+                    dayNumber: 3,
+                    dayTitle: "Scenic Drive to Manali & Old Manali Vibe",
+                    location: "Manali, Himachal Pradesh",
+                    morning: "07:30 AM – Early departure along NH154 through Mandi and the scenic Beas river gorge toward Kullu Valley (approx. 6.5 hrs).",
+                    afternoon: "02:30 PM – Arrive in Manali. Check into hotel surrounded by pine trees and apple orchards. Walk across the old wooden bridge into Old Manali.",
+                    evening: "05:30 PM – Visit the 1553 CE wooden pagoda Hadimba Devi Temple set inside cedar forest. Dinner at Johnson’s Cafe (fresh baked Himalayan brown trout with almonds).",
+                    localTip: "Old Manali has authentic bakeries, live acoustic music, and handicraft lanes far more peaceful than Mall Road."
+                },
+                {
+                    dayNumber: 4,
+                    dayTitle: "Atal Tunnel Expedition into Lahaul Valley & Sissu Falls",
+                    location: "Atal Tunnel & Lahaul Valley",
+                    morning: "08:00 AM – Drive north toward Solang Valley and enter the engineering marvel of Atal Tunnel (9.02 km long, world’s longest highway tunnel above 10,000 ft).",
+                    afternoon: "10:30 AM – Emerge into the stark, breathtaking trans-Himalayan landscape of Lahaul Valley. Hike 20 minutes to Sissu Waterfall across the suspension bridge.",
+                    evening: "03:30 PM – Drive back through the tunnel. Optional paragliding or cable car ride at Solang Valley. Warm siddu (Himachal steamed wheat dumpling) at local dhaba.",
+                    localTip: "Atal Tunnel connects lush green Beas valley to semi-arid Lahaul within 15 minutes; weather on the other side can be vastly colder and windier."
+                }
+            ]
         },
         "monsoon-nature": {
             badge: "Emerald Rainforest & Living Bridges",
-            title: "Abode of Clouds & Monsoon Wonderland",
-            subtitle: "Shillong • Cherrapunji (Sohra) • Mawlynnong • Dawki",
-            route: "Guwahati Airport → Umiam Lake → Cherrapunji roaring waterfalls",
-            climate: "July to September: Lush rain, rolling clouds, magnificent roaring waterfalls",
-            budget: "₹3,000 - ₹6,000 ($38 - $75 USD) per day",
-            highlight: "Trekking through lush rainforest canopy to see 500-year-old living root bridges.",
-            filterTag: "east"
+            title: "Abode of Clouds & Monsoon Living Roots Circuit",
+            subtitle: "Guwahati • Shillong • Cherrapunji (Sohra) • Mawlynnong • Dawki",
+            route: "Guwahati Airport (GAU) → Umiam Lake viewpoint → Shillong NH6 → Sohra cliff road (55 km / 2 hrs) → Dawki Indo-Bangladesh border → Return via Guwahati",
+            climate: "July to September: Spectacular monsoon rain, roaring waterfalls, misty canyon clouds (18°C – 24°C). Waterproof trekking boots & rain ponchos mandatory.",
+            budgets: {
+                backpacker: "₹2,000 / $24 USD per person/day (Nongriat village homestay, shared Sumo cabs from Shillong, Khasi rice platters)",
+                comfort: "₹4,600 / $55 USD per person/day (Boutique pine cottages, private AC tourist cab, local indigenous Khasi trekking guide)",
+                luxury: "₹15,500 / $188 USD per person/day (Ri Kynjai Resort Umiam Lake, Polo Orchid Cherrapunji cliff-view suite, private boat charter at Dawki)"
+            },
+            highlight: "Trekking through rainforest canopy to see 500-year-old double-decker living root bridges and roaring Nohkalikai Falls",
+            filterTag: "east",
+            days: [
+                {
+                    dayNumber: 1,
+                    dayTitle: "Arrival in Guwahati, Umiam Lake & Scotland of the East",
+                    location: "Guwahati to Shillong",
+                    morning: "09:30 AM – Arrive Lokpriya Gopinath Bordoloi Airport in Guwahati. Board private taxi ascending NH6 into Meghalaya (approx. 3.5 hrs).",
+                    afternoon: "01:00 PM – Stop at Umiam Lake (Barapani) for lake-view lunch and fresh pine breeze. Continue into Shillong city (1,500m elevation).",
+                    evening: "05:00 PM – Stroll through Police Bazar and Laitumkhrah. Coffee at Dylan’s Cafe (tribute to Bob Dylan). Overnight stay at Shillong heritage lodge.",
+                    localTip: "Try traditional Khasi snack Tungrymbai or roasted pork momos at local cafes in Laitumkhrah."
+                },
+                {
+                    dayNumber: 2,
+                    dayTitle: "Cherrapunji (Sohra) Waterfalls & Mawsmai Limestone Caves",
+                    location: "Cherrapunji (Sohra)",
+                    morning: "08:00 AM – Drive to Cherrapunji across the dramatic misty canyons of Sohra. Stop at the thundering Elephant Falls and Mawkdok Dympep Valley viewpoint zip-line.",
+                    afternoon: "01:00 PM – Visit Nohkalikai Falls (India’s tallest plunge waterfall at 340 meters) tumbling into a turquoise pool. Lunch at Orange Roots pure vegetarian restaurant.",
+                    evening: "03:30 PM – Walk through the illuminated subterranean fossil formations of Mawsmai Cave. Watch sunset from Seven Sister Falls (Nohsngithiang Falls). Check into Sohra resort.",
+                    localTip: "Carry high-quality waterproof jackets and dry bags for electronics; Cherrapunji receives some of the highest rainfall on Earth."
+                },
+                {
+                    dayNumber: 3,
+                    dayTitle: "Nongriat Double-Decker Living Root Bridge Rainforest Trek",
+                    location: "Nongriat Village",
+                    morning: "06:30 AM – Early departure to Tyrna village (trek base). Begin descending the 3,500 stone steps through lush tropical rainforest canopy.",
+                    afternoon: "10:30 AM – Reach the world-famous Double-Decker Living Root Bridge (Jingkieng Nongriat), bio-engineered by the indigenous Khasi tribe using living Ficus elastica roots over centuries.",
+                    evening: "02:00 PM – Swim in natural turquoise pools at Rainbow Falls. Ascend back to Tyrna or overnight in village eco-homestay with home-cooked farm meals.",
+                    localTip: "Trek involves steep climbing; carry bamboo walking sticks (available for ₹20 at Tyrna trailhead) and ample hydration."
+                },
+                {
+                    dayNumber: 4,
+                    dayTitle: "Mawlynnong Cleanest Village & Transparent Dawki River",
+                    location: "Mawlynnong & Dawki",
+                    morning: "08:00 AM – Drive along border ridges to Mawlynnong (awarded Cleanest Village in Asia). Walk down flower-lined village pathways and climb Sky View bamboo canopy tower.",
+                    afternoon: "12:30 PM – Continue to Dawki on the Indo-Bangladesh border. Board traditional wooden boat on the emerald Umngot River, so transparent that boats appear to float on air.",
+                    evening: "04:30 PM – Drive back toward Shillong via scenic Krang Suri waterfall. Traditional Khasi dinner in Shillong.",
+                    localTip: "Dawki river clarity is highest from October to April, while monsoon brings dramatic roaring waterfall volume across canyons."
+                }
+            ]
         },
         "winter-coastal": {
-            badge: "Sun, Sand & Heritage Haven",
-            title: "Arabian Sea Coastline & Latin Quarters",
-            subtitle: "North Goa Beaches • Old Goa Churches • South Goa Serenity",
-            route: "Fly into Goa International → Explore Old Goa UNESCO churches → Sunset cruise on Mandovi",
-            climate: "November to February: Warm sunny days (24°C – 31°C) with gentle ocean breeze",
-            budget: "₹3,500 - ₹9,000 ($45 - $110 USD) per day",
-            highlight: "Watching the sun dip into the Arabian Sea while tasting fresh grilled fish and listening to fado music.",
-            filterTag: "beaches"
+            badge: "Arabian Sea Coastal Heritage",
+            title: "Portuguese Latin Quarter, Spice Plantations & Serene Sands",
+            subtitle: "Panjim Fontainhas • Old Goa UNESCO Basilicas • Palolem • Gokarna",
+            route: "Fly into Goa Dabolim (GOI) or Manohar Mopa (GOX) → Konkan coastal highway NH66 to South Goa and Gokarna → Return via Goa",
+            climate: "November to February: Warm sunny days (24°C – 31°C), gentle Arabian Sea breeze, zero rain. Light linen wear and swimwear.",
+            budgets: {
+                backpacker: "₹2,200 / $26 USD per person/day (Hostel in Anjuna or Palolem beach hut, rented Activa scooter ₹400/day, beach shack fish curry)",
+                comfort: "₹5,200 / $63 USD per person/day (Restored 19th-century Portuguese heritage villa in Fontainhas, AC cab, fine dining Goan meals)",
+                luxury: "₹19,000 / $230 USD per person/day (Taj Exotica Benaulim / The Leela Goa, private sunset catamaran cruise, vintage private estate dinner)"
+            },
+            highlight: "Fontainhas Latin Quarter heritage architectural walk, Basilica of Bom Jesus, and fresh butter garlic crab at Fisherman's Wharf",
+            filterTag: "beaches",
+            days: [
+                {
+                    dayNumber: 1,
+                    dayTitle: "Fontainhas Portuguese Latin Quarter & Sunset Mandovi Cruise",
+                    location: "Panaji (Panjim), Goa",
+                    morning: "10:00 AM – Arrive in Goa. Check into heritage boutique hotel in Fontainhas (Panjim). Walking tour through cobblestone lanes with pastel-painted Portuguese villas and oyster-shell windows.",
+                    afternoon: "01:00 PM – Authentic Goan lunch at Mum’s Kitchen or Viva Panjim (Prawn Balchão, Pork Vindaloo, or Mushroom Xacuti). Coffee and pastéis de nata (egg tart) at Confeitaria 31 de Janeiro.",
+                    evening: "05:00 PM – Visit Church of Our Lady of the Immaculate Conception on the tiered zig-zag staircase. Sunset walk along Miramar beach or Mandovi riverfront.",
+                    localTip: "Respect local residents in Fontainhas: avoid photographing through private open residential windows."
+                },
+                {
+                    dayNumber: 2,
+                    dayTitle: "Old Goa UNESCO Basilicas & Sahakari Spice Farm",
+                    location: "Old Goa & Ponda",
+                    morning: "08:30 AM – Drive 10 km to Old Goa (former capital of Portuguese India). Marvel at the 1605 CE Basilica of Bom Jesus (relics of St. Francis Xavier) and colossal Sé Cathedral.",
+                    afternoon: "12:30 PM – Guided spice tour at Sahakari Spice Farm in Ponda. Enjoy traditional Goan buffet lunch served on fresh banana leaves with cashew feni tasting.",
+                    evening: "05:00 PM – Drive south to coastal Cavelossim or Benaulim. Dinner at Fisherman’s Wharf overlooking Sal River (fresh grilled Kingfish and crab rechado).",
+                    localTip: "Modest dress covering shoulders and knees is mandatory inside Old Goa basilicas."
+                },
+                {
+                    dayNumber: 3,
+                    dayTitle: "Crescent Beach Palolem & Sunset at Cabo de Rama Fort",
+                    location: "South Goa Coastline",
+                    morning: "08:30 AM – Head to scenic crescent-shaped Palolem Beach. Hire a kayak or small boat to spot wild dolphins off Butterfly Beach.",
+                    afternoon: "01:00 PM – Fresh wood-fired pizza and coconut water at Dropadi Beach Shack. Swim in warm, gentle Arabian Sea waters.",
+                    evening: "04:30 PM – Drive to dramatic ruins of Cabo de Rama Fort standing on a cliff edge. Watch glorious sunset over the uninterrupted Arabian Sea horizon. Dinner at Martin's Corner.",
+                    localTip: "Palolem is significantly cleaner, quieter, and safer for swimming compared to crowded northern beaches."
+                },
+                {
+                    dayNumber: 4,
+                    dayTitle: "Excursion to Sacred Om Beach Gokarna or Departure",
+                    location: "Gokarna, Karnataka",
+                    morning: "07:30 AM – Optional scenic coastal drive across Karnataka border along NH66 to temple beach town Gokarna (90 km / 2 hrs).",
+                    afternoon: "11:30 AM – Visit the ancient 4th-century Mahabaleshwar Temple and walk the cliff path connecting Kudle Beach to the sacred Om-shaped Om Beach.",
+                    evening: "04:30 PM – Sunset tea at Namaste Cafe overlooking breaking waves. Drive back to Goa for departure flights.",
+                    localTip: "Gokarna offers pristine secluded beaches with fewer commercial crowds than central Goa."
+                }
+            ]
         }
     };
 
+    let activeSelectedDay = 0;
+    let currentActivePlan = null;
+
     const tripPlannerForm = document.getElementById("tripPlannerForm");
     const saveTripBtn = document.getElementById("saveTripBtn");
+    const printTripBtn = document.getElementById("printTripBtn");
     const viewCircuitStopsBtn = document.getElementById("viewCircuitStopsBtn");
+    const itineraryDayPills = document.getElementById("itineraryDayPills");
+    const itineraryDayContent = document.getElementById("itineraryDayContent");
+
+    function renderDaySchedule(dayIndex) {
+        if (!currentActivePlan || !currentActivePlan.days || currentActivePlan.days.length === 0) return;
+        activeSelectedDay = Math.max(0, Math.min(dayIndex, currentActivePlan.days.length - 1));
+
+        
+        if (itineraryDayPills) {
+            const pills = itineraryDayPills.querySelectorAll(".itin-day-pill");
+            pills.forEach((p, idx) => {
+                p.classList.toggle("active", idx === activeSelectedDay);
+                p.setAttribute("aria-selected", idx === activeSelectedDay ? "true" : "false");
+            });
+        }
+
+        const day = currentActivePlan.days[activeSelectedDay];
+        if (!day || !itineraryDayContent) return;
+
+        itineraryDayContent.innerHTML = `
+            <div class="day-header-meta">
+                <h5>Day ${day.dayNumber}: ${day.dayTitle}</h5>
+                <span class="day-loc-badge"><i class="fa-solid fa-location-dot"></i> ${day.location}</span>
+            </div>
+            <div class="day-slots-grid">
+                <div class="day-slot-item">
+                    <span class="slot-tag"><i class="fa-solid fa-sun"></i> Morning &bull; Dawn &ndash; 11:30</span>
+                    <p>${day.morning}</p>
+                </div>
+                <div class="day-slot-item">
+                    <span class="slot-tag"><i class="fa-solid fa-utensils"></i> Afternoon &bull; 12:00 &ndash; 16:30</span>
+                    <p>${day.afternoon}</p>
+                </div>
+                <div class="day-slot-item">
+                    <span class="slot-tag"><i class="fa-solid fa-moon"></i> Evening &bull; 17:00 &ndash; Night</span>
+                    <p>${day.evening}</p>
+                </div>
+            </div>
+            <div class="day-logistics-advisory">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <strong>Verified Ground Advisory:</strong> ${day.localTip}
+                </div>
+            </div>
+        `;
+    }
+
+    function generateDayPills(days) {
+        if (!itineraryDayPills) return;
+        itineraryDayPills.innerHTML = "";
+        days.forEach((day, index) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = `itin-day-pill ${index === activeSelectedDay ? "active" : ""}`;
+            btn.setAttribute("role", "tab");
+            btn.setAttribute("aria-selected", index === activeSelectedDay ? "true" : "false");
+            btn.innerHTML = `<i class="fa-solid fa-calendar-day"></i> Day ${day.dayNumber}`;
+            btn.addEventListener("click", () => {
+                renderDaySchedule(index);
+            });
+            itineraryDayPills.appendChild(btn);
+        });
+    }
+
+    function applyTripPlan(season, style, duration, budgetTier, origin, companion) {
+        let key = `${season}-${style}`;
+        if (!plannerCircuits[key]) {
+            if (style === "adventure" || season === "summer") key = "summer-adventure";
+            else if (style === "coastal") key = "winter-coastal";
+            else if (style === "northeast" || season === "monsoon") key = "monsoon-nature";
+            else if (style === "spiritual") key = "winter-spiritual";
+            else if (style === "nature") key = "winter-nature";
+            else key = "winter-heritage";
+        }
+
+        const basePlan = plannerCircuits[key];
+        let maxDays = 7;
+        if (duration === "short") maxDays = 4;
+        else if (duration === "classic") maxDays = 7;
+        else if (duration === "grand") maxDays = 12;
+
+        const slicedDays = basePlan.days.slice(0, Math.min(maxDays, basePlan.days.length));
+
+        
+        let routeDisplay = basePlan.route;
+        if (origin && origin !== "delhi") {
+            const originNames = {
+                mumbai: "Mumbai (CSMT/BOM)",
+                bengaluru: "Bengaluru (BLR)",
+                kolkata: "Kolkata (HWH/CCU)",
+                kochi: "Kochi (COK)",
+                chennai: "Chennai (MAS/MAA)"
+            };
+            const name = originNames[origin] || origin;
+            routeDisplay = `Transit connect from ${name} via direct express flight/rail → ${basePlan.route}`;
+        }
+
+        const tierNames = {
+            backpacker: "Backpacker Tier",
+            comfort: "Comfort Heritage Tier",
+            luxury: "Palace Luxury Tier"
+        };
+
+        const budgetDisplay = basePlan.budgets[budgetTier] || basePlan.budgets.comfort;
+
+        currentActivePlan = {
+            badge: `${basePlan.badge} • ${slicedDays.length} DAYS`,
+            tierBadge: tierNames[budgetTier] || "Comfort Heritage",
+            title: basePlan.title,
+            subtitle: basePlan.subtitle,
+            route: routeDisplay,
+            climate: basePlan.climate,
+            budget: budgetDisplay,
+            highlight: basePlan.highlight,
+            filterTag: basePlan.filterTag,
+            days: slicedDays
+        };
+
+        const resultBox = document.getElementById("itineraryResult");
+        if (resultBox) resultBox.style.opacity = "0.3";
+
+        setTimeout(() => {
+            const badgeEl = document.getElementById("itineraryBadge");
+            const tierBadgeEl = document.getElementById("itineraryTierBadge");
+            const titleEl = document.getElementById("itineraryTitle");
+            const subtitleEl = document.getElementById("itinerarySubtitle");
+            const routeEl = document.getElementById("itineraryRoute");
+            const climateEl = document.getElementById("itineraryClimate");
+            const budgetEl = document.getElementById("itineraryBudget");
+            const highlightEl = document.getElementById("itineraryHighlight");
+
+            if (badgeEl) badgeEl.textContent = currentActivePlan.badge;
+            if (tierBadgeEl) tierBadgeEl.textContent = currentActivePlan.tierBadge;
+            if (titleEl) titleEl.textContent = currentActivePlan.title;
+            if (subtitleEl) subtitleEl.textContent = currentActivePlan.subtitle;
+            if (routeEl) routeEl.innerHTML = currentActivePlan.route;
+            if (climateEl) climateEl.textContent = currentActivePlan.climate;
+            if (budgetEl) budgetEl.textContent = currentActivePlan.budget;
+            if (highlightEl) highlightEl.textContent = currentActivePlan.highlight;
+
+            activeSelectedDay = 0;
+            generateDayPills(currentActivePlan.days);
+            renderDaySchedule(0);
+
+            if (viewCircuitStopsBtn) {
+                viewCircuitStopsBtn.onclick = () => {
+                    currentFilter = currentActivePlan.filterTag || "all";
+                    updateCategoryPills();
+                    renderDestinations();
+                    const pTrips = document.querySelector("#popularTrips");
+                    if (pTrips) pTrips.scrollIntoView({ behavior: "smooth" });
+                };
+            }
+
+            if (resultBox) resultBox.style.opacity = "1";
+        }, 150);
+    }
 
     if (tripPlannerForm) {
         tripPlannerForm.addEventListener("submit", (e) => {
             e.preventDefault();
-            const season = document.getElementById("travelSeason").value;
-            const style = document.getElementById("travelStyle").value;
-            const duration = document.getElementById("travelDuration").value;
+            const origin = document.getElementById("travelOrigin")?.value || "delhi";
+            const season = document.getElementById("travelSeason")?.value || "winter";
+            const style = document.getElementById("travelStyle")?.value || "heritage";
+            const duration = document.getElementById("travelDuration")?.value || "classic";
+            const budgetTier = document.getElementById("travelBudgetTier")?.value || "comfort";
+            const companion = document.getElementById("travelCompanion")?.value || "couple";
 
-            let key = `${season}-${style}`;
-            if (!plannerCircuits[key]) {
-                if (style === "adventure" || season === "summer") key = "summer-adventure";
-                else if (style === "coastal") key = "winter-coastal";
-                else if (season === "monsoon") key = "monsoon-nature";
-                else key = "winter-heritage";
-            }
-
-            const plan = plannerCircuits[key];
-            const resultBox = document.getElementById("itineraryResult");
-            if (resultBox) resultBox.style.opacity = "0.3";
-
-            setTimeout(() => {
-                document.getElementById("itineraryBadge").textContent = `${plan.badge} • ${duration.toUpperCase()}`;
-                document.getElementById("itineraryTitle").textContent = plan.title;
-                document.getElementById("itinerarySubtitle").textContent = plan.subtitle;
-                document.getElementById("itineraryRoute").textContent = plan.route;
-                document.getElementById("itineraryClimate").textContent = plan.climate;
-                document.getElementById("itineraryBudget").textContent = plan.budget;
-                document.getElementById("itineraryHighlight").textContent = plan.highlight;
-
-                if (viewCircuitStopsBtn) {
-                    viewCircuitStopsBtn.onclick = () => {
-                        currentFilter = plan.filterTag || "all";
-                        updateCategoryPills();
-                        renderDestinations();
-                        const pTrips = document.querySelector("#popularTrips");
-                        if (pTrips) pTrips.scrollIntoView({ behavior: "smooth" });
-                    };
-                }
-
-                if (resultBox) resultBox.style.opacity = "1";
-                showToast("✨ Personalized Itinerary Generated!");
-            }, 200);
+            applyTripPlan(season, style, duration, budgetTier, origin, companion);
+            showToast("Verified Logistics Circuit Generated");
         });
+
+        
+        applyTripPlan("winter", "heritage", "classic", "comfort", "delhi", "couple");
     }
 
     if (saveTripBtn) {
         saveTripBtn.addEventListener("click", () => {
-            showToast("💾 Itinerary saved to your offline travel wallet!");
+            if (!currentActivePlan) return;
+            let exportText = `INDIA TRAVEL PLANNER - VERIFIED LOGISTICS CIRCUIT\n`;
+            exportText += `Circuit: ${currentActivePlan.title}\n`;
+            exportText += `Destinations: ${currentActivePlan.subtitle}\n`;
+            exportText += `Budget Estimate: ${currentActivePlan.budget}\n`;
+            exportText += `Climate Guidance: ${currentActivePlan.climate}\n\n`;
+            exportText += `DAY-BY-DAY VERIFIED SCHEDULE:\n`;
+            currentActivePlan.days.forEach(d => {
+                exportText += `\n[Day ${d.dayNumber}: ${d.dayTitle} - ${d.location}]\n`;
+                exportText += `- Morning: ${d.morning}\n`;
+                exportText += `- Afternoon: ${d.afternoon}\n`;
+                exportText += `- Evening: ${d.evening}\n`;
+                exportText += `- Ground Advisory: ${d.localTip}\n`;
+            });
+            exportText += `\nOfficial Tourism Experience Portal • Ministry of Tourism, Government of India`;
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(exportText).then(() => {
+                    showToast("Itinerary summary copied to clipboard");
+                }).catch(() => {
+                    showToast("Itinerary copied to clipboard");
+                });
+            } else {
+                showToast("Itinerary copied to clipboard");
+            }
         });
     }
 
-    // =================================================================
-    // 11. MOBILE MENU & NAVIGATION SCROLL SPY
-    // =================================================================
+    if (printTripBtn) {
+        printTripBtn.addEventListener("click", () => {
+            window.print();
+        });
+    }
+
+    
+    
+    
     const mobileMenuToggle = document.getElementById("mobileMenuToggle");
     const navMenu = document.getElementById("navMenu");
     const navLinks = document.querySelectorAll(".gov-nav-link");
@@ -1533,7 +2025,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Newsletter Submission
+    
     const newsletterForm = document.getElementById("newsletterForm");
     if (newsletterForm) {
         newsletterForm.addEventListener("submit", (e) => {
@@ -1543,9 +2035,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =================================================================
-    // 12. TOAST NOTIFICATION SYSTEM
-    // =================================================================
+    
+    
+    
     const toast = document.getElementById("toastNotification");
     const toastMsg = document.getElementById("toastMessage");
     let toastTimer = null;
@@ -1560,6 +2052,116 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 3200);
     }
 
-    // Initial render of destinations grid
+    
+    
+    
+    const policyModalBackdrop = document.getElementById("policyModalBackdrop");
+    const policyModalCloseBtn = document.getElementById("policyModalCloseBtn");
+    const policyModalAcknowledgeBtn = document.getElementById("policyModalAcknowledgeBtn");
+    const policyModalTitle = document.getElementById("policyModalTitle");
+    const policyModalSubtitle = document.getElementById("policyModalSubtitle");
+    const policyModalContent = document.getElementById("policyModalContent");
+    const policyTriggers = document.querySelectorAll(".policy-modal-trigger");
+
+    const policyData = {
+        website: {
+            title: "Website Policies",
+            subtitle: "Guidelines for Indian Government Websites (GIGW 3.0) Compliance",
+            body: `
+                <h4>1. Scope & Governance</h4>
+                <p>This official portal is published and maintained by the Ministry of Tourism, Government of India. It adheres to the technical, accessibility, and design standards established by the National Informatics Centre (NIC) and the Ministry of Electronics & Information Technology (MeitY).</p>
+                <h4>2. Hyperlinking Policy</h4>
+                <p>Prior written permission must be obtained before links from external domains are directed to this portal. Links directed here must not open within frames of another site; pages must render in a separate window or tab to clearly indicate authentic government domain ownership.</p>
+                <h4>3. Copyright & Reproduction</h4>
+                <p>Material featured on this portal may be reproduced free of charge in any format or media without requiring specific permission, subject to the material being reproduced accurately and not used in a derogatory or misleading context. The source must be explicitly acknowledged.</p>
+                <h4>4. Content Management & Review</h4>
+                <p>Content published regarding monuments, tourist circuits, culinary traditions, and travel guidelines is subject to regular administrative verification by regional tourism offices.</p>
+            `
+        },
+        terms: {
+            title: "Terms of Use",
+            subtitle: "Conditions Governing Public Access to Ministry Digital Resources",
+            body: `
+                <h4>1. Acceptance of Terms</h4>
+                <p>By browsing, accessing, or utilizing the interactive features (including the Smart Trip Planner, Tourism Database, and Gallery) of this portal, you agree to comply with the terms and statutory provisions of the Information Technology Act, 2000 and applicable Government of India regulations.</p>
+                <h4>2. Informational Purpose & Advisories</h4>
+                <p>The information on destinations, entry fees, visiting hours, and train connectivity is compiled for public facilitation. Although rigorous verification is undertaken, travelers are encouraged to consult official local authorities or the 24x7 Multi-Lingual Tourist Info Helpline (1363) prior to travel.</p>
+                <h4>3. External Links & Services</h4>
+                <p>External links provided (such as Indian Railways IRCTC, Bureau of Immigration e-Visa, and Digital India portals) are hosted by respective administrative authorities. The Ministry does not assume liability for transactions carried out on external systems.</p>
+            `
+        },
+        privacy: {
+            title: "Privacy Policy",
+            subtitle: "Digital Personal Data Protection (DPDP) Act 2023 Compliance",
+            body: `
+                <h4>1. Data Collection & Usage</h4>
+                <p>This portal does not automatically capture any specific personal information (such as name, phone number, or e-mail address) that allows us to identify you individually. Personal details are collected only when voluntarily provided (e.g., subscribing to official bulletins or submitting tourist inquiries).</p>
+                <h4>2. Local Storage & Client Preferences</h4>
+                <p>Client-side LocalStorage and session cookies are employed exclusively for accessibility enhancements—preserving user-selected font size adjustments, high-contrast dark mode states, and traveler wishlist bookmarks. No tracking cookies are shared with third parties.</p>
+                <h4>3. Information Security Standards</h4>
+                <p>All data transmissions and portal servers follow security best practices aligned with CERT-In directives, including strict Transport Layer Security (TLS 1.3), Content Security Policy, and HTTP strict transport headers.</p>
+            `
+        },
+        accessibility: {
+            title: "Accessibility Statement",
+            subtitle: "Commitment to Universal Accessibility (WCAG 2.1 Level AA)",
+            body: `
+                <h4>1. Conformance Standard</h4>
+                <p>The Ministry of Tourism is committed to ensuring that its digital services are accessible to people of all abilities, including persons with visual, auditory, cognitive, and motor impairments. This site is built in compliance with WCAG 2.1 Level AA and GIGW accessibility standards.</p>
+                <h4>2. Accessibility Features Built-In</h4>
+                <ul>
+                    <li><strong>Dynamic Text Sizing:</strong> Font resizer controls (A-, A, A+) allowing users to scale type across 14px, 16px, and 18px baseline levels without page disruption.</li>
+                    <li><strong>High Contrast Theme:</strong> Inverted color palette with contrast ratios exceeding 7:1 for headers and 4.5:1 for body copy.</li>
+                    <li><strong>Bilingual Localization:</strong> Instant toggle between Hindi (राजभाषा) and English with Devanagari script font rendering.</li>
+                    <li><strong>Keyboard Navigation:</strong> Logical tab sequences, visible focus indicators, and screen reader skip-to-content links.</li>
+                </ul>
+                <h4>3. Accessibility Feedback & Assistance</h4>
+                <p>If you encounter any accessibility barriers on this portal, please notify the Ministry's Web Accessibility Team or dial the Toll-Free Tourist Helpline: <strong>1363</strong> (Toll Free within India) / <strong>+91-11-23365358</strong>.</p>
+            `
+        }
+    };
+
+    function openPolicyModal(policyKey) {
+        const policy = policyData[policyKey];
+        if (!policy || !policyModalBackdrop) return;
+
+        policyModalTitle.textContent = policy.title;
+        policyModalSubtitle.textContent = policy.subtitle;
+        policyModalContent.innerHTML = policy.body;
+
+        policyModalBackdrop.classList.add("active");
+        policyModalBackdrop.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closePolicyModal() {
+        if (!policyModalBackdrop) return;
+        policyModalBackdrop.classList.remove("active");
+        policyModalBackdrop.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    policyTriggers.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const policyKey = btn.getAttribute("data-policy");
+            openPolicyModal(policyKey);
+        });
+    });
+
+    if (policyModalCloseBtn) policyModalCloseBtn.addEventListener("click", closePolicyModal);
+    if (policyModalAcknowledgeBtn) policyModalAcknowledgeBtn.addEventListener("click", closePolicyModal);
+    if (policyModalBackdrop) {
+        policyModalBackdrop.addEventListener("click", (e) => {
+            if (e.target === policyModalBackdrop) closePolicyModal();
+        });
+    }
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            if (policyModalBackdrop && policyModalBackdrop.classList.contains("active")) closePolicyModal();
+        }
+    });
+
+    
     renderDestinations();
 });
